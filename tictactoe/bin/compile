@@ -1,2 +1,0 @@
-#!/bin/bash
-javac src/main/java/is/ru/tictactoe/*.java -d classes
