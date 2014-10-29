@@ -13,6 +13,18 @@ public class TicTacToeTest{
                 }
 		
 		@Test
+		public void testX()
+		{
+			assertEquals("X", TicTacToe.add("X"));
+		}
+		
+		@Test
+		public void testNotXO()
+		{
+			assertEquals("Please choose either X or O", TicTacToe.add("U"));
+		}
+		
+		@Test
 		public void testPlayers()
 		{
 			assertEquals("You chose 1 player", TicTacToe.Players(2));

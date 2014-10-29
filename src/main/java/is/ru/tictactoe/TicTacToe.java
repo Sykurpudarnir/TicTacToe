@@ -3,11 +3,18 @@ package is.ru.tictactoe;
 public class TicTacToe{
         public static String add(String text)
         {
-                if(text.contains("x"))
+                if(text.equals("X"))
                 {
-                        return "x";
+                        return "X";
                 }
-                return "O";
+		else if(text.equals("O"))
+		{
+			return "O";
+		}
+                else
+		{
+			return "Please choose either X or O";
+		}
         }
 	public static String Players(int a)
 	{
