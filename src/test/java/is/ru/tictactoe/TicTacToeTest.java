@@ -9,6 +9,12 @@ public class TicTacToeTest{
                 @Test
                 public void testXoreO()
                 {
-                        assertEquals("x", TicTacToe.add("x"));
+                        assertEquals("O", TicTacToe.add("O"));
                 }
+		
+		@Test
+		public void testPlayers()
+		{
+			assertEquals("You chose 1 player", TicTacToe.Players(2));
+		}
 }
