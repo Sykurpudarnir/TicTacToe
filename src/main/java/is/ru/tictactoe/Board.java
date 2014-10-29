@@ -5,8 +5,19 @@ public class Board {
 	
 	
 	
-	static int[][] board = new int[rows][col];
+	static char[][] board = new char[rows][col];
 	
+
+	public static void newBoard(){
+		for(int i = 0; i < rows; i++)
+		{
+			for(int j = 0; j < col; j++)
+			{
+				board[i][j] = 0;
+			}
+		}
+	}
+
 	public static void printBoard(){
 		for(int i = 0; i < rows; i++)
 		{
@@ -14,11 +25,25 @@ public class Board {
 			{
 				if(j < col - 1)
 				{
-					System.out.print(board[i][j] + " | ");
+					if(board[i][j] == 0)
+					{
+						System.out.print(" " + " | ");
+					}
+					else
+					{
+						System.out.print(board[i][j] + " | ");
+					}
 				}
 				else
 				{
-					System.out.print(board[i][j]);
+					if(board[i][j] == 0)
+					{
+						System.out.print("   ");
+					}
+					else
+					{
+						System.out.print(board[i][j]);
+					}
 				}
 			}
 			System.out.println();
@@ -31,6 +56,7 @@ public class Board {
 	}
 	
 	public static void main(String[] args) {
+		newBoard();
 		printBoard();
 	}
 }
