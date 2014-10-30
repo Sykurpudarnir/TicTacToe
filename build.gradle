@@ -40,14 +40,15 @@ jar {
  } 
 }
 
+dependencies {
+    deployerJars "org.apache.maven.wagon:wagon-ssh:2.2"
+}
+
 uploadArchives {
-	repositories {
-		ivy {
-			credentials {
-				username "sykurpudi"
-				password "sugasuga6xy"
-			}
-			url "http://hordur.me"
-		}
-	}
+    repositories.mavenDeployer {
+        configuration = configurations.deployerJars
+        repository(url: "scp://hordur.me/") {
+            authentication(userName: "sykurpudi", password: "sugasuga6xy")
+        }
+    }
 }
