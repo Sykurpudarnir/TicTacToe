@@ -35,8 +35,8 @@ public class TicTacToeTest{
 		{
 			char[][] board2 = new char[][]{{'X', 'O', 'X'},{'X','O','O'},{'O','X','X'}};
 			char[][] board4 = new char[][]{{'O', 'O', 'X'},{' ','X',' '},{' ',' ',' '}};
-			assertEquals(3, TicTacToe.checkIfWon(board2));
-			assertEquals(3, TicTacToe.checkIfWon(board4));
+			assertEquals("continue", TicTacToe.checkIfWon(board2));
+			assertEquals("continue", TicTacToe.checkIfWon(board4));
 		}
 
 		@Test
@@ -44,15 +44,15 @@ public class TicTacToeTest{
 		{
 			char[][] board1 = new char[][]{{'X', 'O', 'O'},{'X','X','O'},{'O','X','X'}};
 			char[][] board3 = new char[][]{{'O', 'O', 'X'},{' ','X',' '},{'X',' ',' '}};
-			assertEquals(1, TicTacToe.checkIfWon(board1));
-			assertEquals(1, TicTacToe.checkIfWon(board3));
+			assertEquals("Congratulation player1, you won!!!!", TicTacToe.checkIfWon(board1));
+			assertEquals("Congratulation player1, you won!!!!", TicTacToe.checkIfWon(board3));
 		}
 
 		@Test
 		public void testWinnerCol()
 		{
 			char[][] board5 = new char[][]{{'O', 'O', 'X'},{'O','X','X'},{'O','X',' '}};
-			assertEquals(2, TicTacToe.checkIfWon(board5));
+			assertEquals("YOU LOST!! The computer won!!", TicTacToe.checkIfWon(board5));
 		}
 		
 		@Test
@@ -69,6 +69,6 @@ public class TicTacToeTest{
 		public void testWinnerRow()
 		{
 			char[][] board6 = new char[][]{{'O', 'O', 'X'},{'X','X','X'},{'O','X','O'}};
-                        assertEquals(1, TicTacToe.checkIfWon(board6));
+                        assertEquals("Congratulation player1, you won!!!!", TicTacToe.checkIfWon(board6));
 		}
 }

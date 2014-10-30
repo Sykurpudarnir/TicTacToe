@@ -43,29 +43,29 @@ public class TicTacToe{
 	}
 
 
-	public static int checkIfWon(char[][] board){
+	public static String checkIfWon(char[][] board){
 		if(board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[1][1] != ' ')
 		{
 			if(board[0][0] == 'X'){
 				System.out.println("Congratulation player1, you won!!!!");
-				return 1; // if 1, player 1 wins
+				return "Congratulation player1, you won!!!!";
 			}
 
 			else{
-				System.out.println("Congratulation player2, you won!!!");
-				return 2;
+				System.out.println("YOU LOST!! The computer won!!");
+				return "YOU LOST!! The computer won!!";
 			}
 		}
 		if(board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[2][0] != ' ')
 		{
 			if(board[0][2] == 'X'){
-				System.out.println("Congratulation player1, you won!!!");
-                        	return 1; // if 1, player 1 wins
+				System.out.println("Congratulation player1, you won!!!!");
+                        	return "Congratulation player1, you won!!!!";
 			}
 
                         else{
-				System.out.println("Congratulation player2, you won!!!");
-                        	return 2;
+				System.out.println("YOU LOST!! The computer won!!");
+                        	return "YOU LOST!! The computer won!!";
 			}
 		}
 		for(int i = 0; i < 3; i++)
@@ -73,36 +73,36 @@ public class TicTacToe{
 			if(board[0][i] == board[1][i] && board[1][i] == board[2][i] && board[1][i] != ' ')
 			{
 				if(board[0][i] == 'X'){
-					System.out.println("Congratulations player1, you won!!!");
-                        		return 1; // if 1, player 1 wins
+					System.out.println("Congratulation player1, you won!!!!");
+                        		return "Congratulation player1, you won!!!!";
 				}
 
                         	else{
-					System.out.println("Congratulations player2, you won!!!");
-                        		return 2;
+					System.out.println("YOU LOST!! The computer won!!");
+                        		return "YOU LOST!! The computer won!!";
 				}
 			}
 			if(board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][2] != ' ')
 			{
 				if(board[i][0] == 'X'){
-					System.out.println("Congratulations player1, you won!!!!");
-                        		return 1; // if 1, player 1 wins
+					System.out.println("Congratulation player1, you won!!!!");
+                        		return "Congratulation player1, you won!!!!";
 				}
                         	else{
-					System.out.println("Congratulations player2, you won!!!!");
-                        		return 2;
+					System.out.println("YOU LOST!! The computer won!!");
+                        		return "YOU LOST!! The computer won!!";
 				}
 			}
 		}
 		
-		return 3;	
+		return "continue";	
 	}
 
 	public static void playGame(){
 		Scanner user_input = new Scanner(System.in);
 
 		int count = 1; 
-		while(checkIfWon(Board.board) == 3){
+		while(checkIfWon(Board.board) == "continue"){
 			
 			if(count%2 != 0){
 				System.out.println("player 1's turn");
