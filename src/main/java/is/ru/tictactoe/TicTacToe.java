@@ -82,7 +82,6 @@ public class TicTacToe{
 		return 3;	
 	}
 
-
 	public static void playGame(){
 		Scanner user_input = new Scanner(System.in);
 
@@ -90,20 +89,32 @@ public class TicTacToe{
 		while(checkIfWon(Board.board) == 3){
 			if(count%2 != 0){
 				System.out.println("player 1's turn");
+				int xcoordinate;
+				do{
+					System.out.println("Select which column from 0-2 you wish to place your symbol");
+					while(!user_input.hasNextInt()){
+						System.out.println("That's not a number! Input the NUMBER of the row you wish to place your symbol! :)");
+						user_input.next();
+					}
+					xcoordinate = user_input.nextInt();
+				} while(!(xcoordinate >= 0) || !(xcoordinate < 3));
 
-				System.out.println("Input x coordinate of the location where you would like to place your symbol");
-				int xcoordinate = Integer.parseInt(user_input.next());
+				int ycoordinate;
+				do{
+					System.out.println("Select which row from 0-2 you wish to place your symbol.");
+					while(!user_input.hasNextInt()){
+						System.out.println("That's not a number! Input the NUMBER of the row you wish to place your symbol! :)");
+						user_input.next();
+					}
+					ycoordinate = user_input.nextInt();
+				}while(!(ycoordinate >= 0) || !(ycoordinate < 3));
 
-				System.out.println("Input y coordinate of the location where you would like to place your symbol");
-				int ycoordinate = Integer.parseInt(user_input.next());
-
-				if((Board.board[xcoordinate][ycoordinate] == ' ' ) && (xcoordinate * ycoordinate <= 4) && (xcoordinate >= 0) &&(ycoordinate >= 0)){
+				if(Board.board[xcoordinate][ycoordinate] == ' '){
 					Board.board[xcoordinate][ycoordinate]  = 'X';
 					count++;
 				}
 				else{
-					System.out.println("Your coordinates are either out of bounds or already occupied");
-					break;
+					System.out.println("Oh no!! that place is already occupied, choose another place for your symbol :)");
 				}
 			}
 			else{
@@ -117,12 +128,13 @@ public class TicTacToe{
 							break;
 						}
 					}
-					break;
+					if(count % 2 != 0){
+						break;
+					}
 				}
 			}
 		}
 	}
-
 
 	public static void main(String[] args) {
 		Board.newBoard();
