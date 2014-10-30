@@ -83,7 +83,7 @@ public class TicTacToe{
 	}
 
         public static void main(String[] args) {
-                printBoard(newBoard());
+//                printBoard(newBoard());
 		System.out.println("Do you want to be player1 or player2? chosee 1 for player1 and 2 for player2");
 		int player;
 		Scanner in = new Scanner(System.in);
