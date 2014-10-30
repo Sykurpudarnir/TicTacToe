@@ -46,36 +46,52 @@ public class TicTacToe{
 	public static int checkIfWon(char[][] board){
 		if(board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[1][1] != ' ')
 		{
-			if(board[0][0] == 'X')
-			return 1; // if 1, player 1 wins
-			else
-			return 2;
+			if(board[0][0] == 'X'){
+				System.out.println("Congratulation player1, you won!!!!");
+				return 1; // if 1, player 1 wins
+			}
+
+			else{
+				System.out.println("Congratulation player2, you won!!!");
+				return 2;
+			}
 		}
 		if(board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[2][0] != ' ')
 		{
-			if(board[0][2] == 'X')
-                        return 1; // if 1, player 1 wins
+			if(board[0][2] == 'X'){
+				System.out.println("Congratulation player1, you won!!!");
+                        	return 1; // if 1, player 1 wins
+			}
 
-                        else
-                        return 2;
+                        else{
+				System.out.println("Congratulation player2, you won!!!");
+                        	return 2;
+			}
 		}
 		for(int i = 0; i < 3; i++)
 		{
 			if(board[0][i] == board[1][i] && board[1][i] == board[2][i] && board[1][i] != ' ')
 			{
-				if(board[0][i] == 'X')
-                        	return 1; // if 1, player 1 wins
+				if(board[0][i] == 'X'){
+					System.out.println("Congratulations player1, you won!!!");
+                        		return 1; // if 1, player 1 wins
+				}
 
-                        	else
-                        	return 2;
+                        	else{
+					System.out.println("Congratulations player2, you won!!!");
+                        		return 2;
+				}
 			}
 			if(board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][2] != ' ')
 			{
-				if(board[i][0] == 'X')
-                        	return 1; // if 1, player 1 wins
-
-                        	else
-                        	return 2;
+				if(board[i][0] == 'X'){
+					System.out.println("Congratulations player1, you won!!!!");
+                        		return 1; // if 1, player 1 wins
+				}
+                        	else{
+					System.out.println("Congratulations player2, you won!!!!");
+                        		return 2;
+				}
 			}
 		}
 		
@@ -87,6 +103,7 @@ public class TicTacToe{
 
 		int count = 1; 
 		while(checkIfWon(Board.board) == 3){
+			
 			if(count%2 != 0){
 				System.out.println("player 1's turn");
 				int xcoordinate;
