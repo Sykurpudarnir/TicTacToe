@@ -8,7 +8,8 @@
 	100% Ready, gradle is up and running and stores the jar in the build folder.
 
 4. The build script has deploy/install target that deploys the executable outside of the working directory or on external server.
-	75% Ready, have to configure Gradle to finish this part.
+	#75% Ready, have to configure Gradle to finish this part.
+	100% Ready, added a megma_build script which deploys the excecutable jar file to my server hordur.me
 
 5. The business logic should be coded using TDD.
 	100% Ready, the code has been writting using TDD.
