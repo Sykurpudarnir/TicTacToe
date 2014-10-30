@@ -20,6 +20,7 @@ Board                    | TicTacToe               |
 -------------------------|--------------------------
 *Print board*            |* Player 2*              |
 
+
 ## Team members
 
 - Hörður Ragnarsson
