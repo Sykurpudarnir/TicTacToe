@@ -27,7 +27,7 @@ public class TicTacToeTest{
 		@Test
 		public void testPlayers()
 		{
-			assertEquals("You chose 1 player", TicTacToe.Players(2));
+			assertEquals("You chose to be player2", TicTacToe.Players(2));
 		}
 
 		@Test
@@ -37,10 +37,11 @@ public class TicTacToeTest{
 			char[][] board2 = new char[][]{{'X', 'O', 'X'},{'X','O','O'},{'O','X','X'}};
 			char[][] board3 = new char[][]{{'O', 'O', 'X'},{' ','X',' '},{'X',' ',' '}};
 			char[][] board4 = new char[][]{{'O', 'O', 'X'},{' ','X',' '},{' ',' ',' '}};
-
-			assertEquals(true, TicTacToe.checkIfWon(board1));
-			assertEquals(false, TicTacToe.checkIfWon(board2));
-			assertEquals(true, TicTacToe.checkIfWon(board3));
-			assertEquals(false, TicTacToe.checkIfWon(board4));
+			char[][] board5 = new char[][]{{'O', 'O', 'X'},{'O','X','X'},{'O','X',' '}};
+			assertEquals(1, TicTacToe.checkIfWon(board1));
+			assertEquals(3, TicTacToe.checkIfWon(board2));
+			assertEquals(1, TicTacToe.checkIfWon(board3));
+			assertEquals(3, TicTacToe.checkIfWon(board4));
+			assertEquals(2, TicTacToe.checkIfWon(board5));
 		}
 }
