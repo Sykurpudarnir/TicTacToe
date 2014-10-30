@@ -38,7 +38,7 @@ public class TicTacToe{
         static char[][] board;
 
 
-        public static void newBoard(){
+        public static char[][] newBoard(){
 		board = new char[rows][col];
                 for(int i = 0; i < rows; i++)
                 {
@@ -47,6 +47,7 @@ public class TicTacToe{
                                 board[i][j] = ' ';
                         }
                 }
+		return board;
         }
 
         public static void printBoard(char[][] board){
@@ -111,6 +112,6 @@ public class TicTacToe{
 	}
 
         public static void main(String[] args) {
-                newBoard();
+                printBoard(newBoard());
 	}
 }
