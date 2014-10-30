@@ -27,7 +27,8 @@ EXTRAS
 7.2 Run focused integration or End-to-end tests (e.g. Selenium). It is necessary to run this on external staging server (e.g. Heroku). To run integration test the application needs to connect to external system e.g. database. To run end-to-end test the system needs to have GUI (e.g. webUI).
 
 7.3 Use Automated Continuous Integrations Server (Travis)
-	25% Ready, have to implement the function into the project
+	#25% Ready, have to implement the function into the project
+	100% Ready, Travis is now integrated in our project.
 
 7.4 Continuous Delivery. For each code change the CI server runs these steps:
 	* Run build script (all targets)
