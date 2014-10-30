@@ -82,12 +82,51 @@ public class TicTacToe{
 		return 3;	
 	}
 
-        public static void main(String[] args) {
-//                printBoard(newBoard());
-		System.out.println("Do you want to be player1 or player2? chosee 1 for player1 and 2 for player2");
-		int player;
-		Scanner in = new Scanner(System.in);
-		player = in.nextInt();
-		Players(player);
+
+	public static void playGame(){
+		Scanner user_input = new Scanner(System.in);
+
+		int count = 1; 
+		while(checkIfWon(Board.board) == 3){
+			if(count%2 != 0){
+				System.out.println("player 1's turn");
+
+				System.out.println("Input x coordinate of the location where you would like to place your symbol");
+				int xcoordinate = Integer.parseInt(user_input.next());
+
+				System.out.println("Input y coordinate of the location where you would like to place your symbol");
+				int ycoordinate = Integer.parseInt(user_input.next());
+
+				if((Board.board[xcoordinate][ycoordinate] == ' ' ) && (xcoordinate * ycoordinate <= 4) && (xcoordinate >= 0) &&(ycoordinate >= 0)){
+					Board.board[xcoordinate][ycoordinate]  = 'X';
+					count++;
+				}
+				else{
+					System.out.println("Your coordinates are either out of bounds or already occupied");
+					break;
+				}
+			}
+			else{
+				System.out.println("computers turn");
+				for(int i = 0; i < 3; i++){
+					for(int j = 0; j < 3; j++){
+						if(Board.board[i][j] == ' '){
+							Board.board[i][j] = 'O';
+							count++;
+							Board.printBoard(Board.board);
+							break;
+						}
+					}
+					break;
+				}
+			}
+		}
 	}
-}
+
+
+	public static void main(String[] args) {
+		Board.newBoard();
+		TicTacToe.playGame();
+		Board.printBoard(Board.board);
+
+	}
