@@ -25,9 +25,6 @@ public class TicTacToeTest{
 		}
 		
 		@Test
-<<<<<<< HEAD
-		public void testWinner()
-=======
 		public void testPlayers()
 		{
 			assertEquals("You chose to be player2", TicTacToe.Players(2));
@@ -35,7 +32,6 @@ public class TicTacToeTest{
 
 		@Test
 		public void testWinnerLost()
->>>>>>> 0d4b2a0f5a9692e5d2748e2bbeacbf1d0595299d
 		{
 			char[][] board2 = new char[][]{{'X', 'O', 'X'},{'X','O','O'},{'O','X','X'}};
 			char[][] board4 = new char[][]{{'O', 'O', 'X'},{' ','X',' '},{' ',' ',' '}};
@@ -58,7 +54,6 @@ public class TicTacToeTest{
 			char[][] board5 = new char[][]{{'O', 'O', 'X'},{'O','X','X'},{'O','X',' '}};
 			assertEquals(2, TicTacToe.checkIfWon(board5));
 		}
-<<<<<<< HEAD
 		
 		@Test
                 public void testPlayer1()
@@ -69,13 +64,11 @@ public class TicTacToeTest{
 		public void testPlayer2()
 		{
 			assertEquals("You chose to be player2", TicTacToe.Players(2));
-=======
-
+		}
 		@Test
 		public void testWinnerRow()
 		{
 			char[][] board6 = new char[][]{{'O', 'O', 'X'},{'X','X','X'},{'O','X','O'}};
                         assertEquals(1, TicTacToe.checkIfWon(board6));
->>>>>>> 0d4b2a0f5a9692e5d2748e2bbeacbf1d0595299d
 		}
 }
