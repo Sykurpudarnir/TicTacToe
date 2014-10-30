@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 package is.ru.tictactoe;
-=======
->>>>>>> 809e96fc4c380998728f0aba55720207db1b4abd
-
 public class TicTacToe{
         public static String inputFromUser(String text)
-        {
+        {	
+		int player1 = 0;
+		int player2 = 0;
                 if(text.equals("X"))
                 {
                         return "X";
@@ -19,17 +17,21 @@ public class TicTacToe{
 			return "Please choose either X or O";
 		}
         }
-	public static String Players(int a)
+	public static void Players(int player)
 	{
-		if(a == 1) {
-			return "You chose 2 player";
+		if(player == 1) {
+			System.out.println("You chose to be player1");
+			player1 = player;
+			player2 = 2;
 		}
-		else if(a == 2){
-			return "You chose 1 player";
+		else if(player == 2){
+			System.out.println( "You chose to be player2");
+			player2 = player;
+			player1 = 1;
 		}
 		else
 		{
-			return "Please choose 1 for 2 player and 2 for 1 player";
+			System.out.println("Please choose 1 for player1 and 2 for player2");
 		}
 	}
 
@@ -87,28 +89,44 @@ public class TicTacToe{
                 }
         }
 
-	public static boolean checkIfWon(){
+	public static int checkIfWon(){
 		if(board[0][0] == board[1][1] && board[1][1] == board[2][2])
-		{
-			return true;
+		{	
+			if(board[0][0] == 'X')
+			return 1; // if 1, player 1 wins
+			
+			else
+			return 2;
 		}
 		if(board[0][2] == board[1][1] && board[1][1] == board[2][0])
 		{
-			return true;
+			if(board[0][2] == 'X')
+                        return 1; // if 1, player 1 wins
+
+                        else
+                        return 2;
 		}
 		for(int i = 0; i < rows; i++)
 		{
 			if(board[0][i] == board[1][i] && board[1][i] == board[2][i])
 			{
-				return true;
+				if(board[0][i] == 'X')
+                        	return 1; // if 1, player 1 wins
+
+                        	else
+                        	return 2;
 			}
 			if(board[i][0] == board[i][1] && board[i][1] == board[i][2])
 			{
-				return true;
+				if(board[i][0] == 'X')
+                        	return 1; // if 1, player 1 wins
+
+                        	else
+                        	return 2;
 			}
 		}
 		
-		return false;	
+		return 3;	
 	}
 
         public static void main(String[] args) {
