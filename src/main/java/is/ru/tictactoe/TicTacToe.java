@@ -1,7 +1,7 @@
-
+package is.ru.tictactoe;
 
 public class TicTacToe{
-        public static String add(String text)
+        public static String inputFromUser(String text)
         {
                 if(text.equals("X"))
                 {
@@ -83,6 +83,30 @@ public class TicTacToe{
                         }
                 }
         }
+
+	public static boolean checkIfWon(){
+		if(board[0][0] == board[1][1] && board[1][1] == board[2][2])
+		{
+			return true;
+		}
+		if(board[0][2] == board[1][1] && board[1][1] == board[2][0])
+		{
+			return true;
+		}
+		for(int i = 0; i < rows; i++)
+		{
+			if(board[0][i] == board[1][i] && board[1][i] == board[2][i])
+			{
+				return true;
+			}
+			if(board[i][0] == board[i][1] && board[i][1] == board[i][2])
+			{
+				return true;
+			}
+		}
+		
+		return false;	
+	}
 
         public static void main(String[] args) {
                 newBoard();

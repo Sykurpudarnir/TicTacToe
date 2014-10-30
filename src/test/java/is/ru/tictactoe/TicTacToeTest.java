@@ -9,19 +9,19 @@ public class TicTacToeTest{
                 @Test
                 public void testXoreO()
                 {
-                        assertEquals("O", TicTacToe.add("O"));
+                        assertEquals("O", TicTacToe.inputFromUser("O"));
                 }
 		
 		@Test
 		public void testX()
 		{
-			assertEquals("X", TicTacToe.add("X"));
+			assertEquals("X", TicTacToe.inputFromUser("X"));
 		}
 		
 		@Test
 		public void testNotXO()
 		{
-			assertEquals("Please choose either X or O", TicTacToe.add("U"));
+			assertEquals("Please choose either X or O", TicTacToe.inputFromUser("U"));
 		}
 		
 		@Test
