@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 package is.ru.tictactoe;
-=======
->>>>>>> 809e96fc4c380998728f0aba55720207db1b4abd
 
 public class TicTacToe{
+
+
         public static String inputFromUser(String text)
         {
                 if(text.equals("X"))
@@ -37,10 +36,11 @@ public class TicTacToe{
 	static int rows = 3;
 
 
-        static char[][] board = new char[rows][col];
+        static char[][] board;
 
 
         public static void newBoard(){
+		board = new char[rows][col];
                 for(int i = 0; i < rows; i++)
                 {
                         for(int j = 0; j < col; j++)
@@ -50,7 +50,7 @@ public class TicTacToe{
                 }
         }
 
-        public static void printBoard(){
+        public static void printBoard(char[][] board){
                 for(int i = 0; i < rows; i++)
                 {
                         for(int j = 0; j < col; j++)
@@ -87,7 +87,7 @@ public class TicTacToe{
                 }
         }
 
-	public static boolean checkIfWon(){
+	public static boolean checkIfWon(char[][] board){
 		if(board[0][0] == board[1][1] && board[1][1] == board[2][2])
 		{
 			return true;
@@ -113,6 +113,5 @@ public class TicTacToe{
 
         public static void main(String[] args) {
                 newBoard();
-                printBoard();
-        }
+	}
 }

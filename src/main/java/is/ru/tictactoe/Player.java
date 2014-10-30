@@ -1,7 +1,5 @@
-
-public abstract class Player()
-{
-	protected int player;
+/*
+public abstract class Player{
 	public Player(int wins)
 	{
 		this.wins = 0; 
@@ -14,7 +12,7 @@ public abstract class Player()
 	
 	char setWins(int newWins)
 	{
-		wins = newWins
+		wins = newWins;
 	}
 	
 	int getWins()
@@ -22,4 +20,4 @@ public abstract class Player()
 		return wins;
 	}
 	
-}
+}*/

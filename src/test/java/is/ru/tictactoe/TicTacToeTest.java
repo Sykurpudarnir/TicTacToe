@@ -29,4 +29,15 @@ public class TicTacToeTest{
 		{
 			assertEquals("You chose 1 player", TicTacToe.Players(2));
 		}
+
+		@Test
+		public void testWinner()
+		{
+			char[][] board1 = new char[][]{{'X', 'O', 'O'},{'X','X','O'},{'O','X','X'}};
+			char[][] board2 = new char[][]{{'X', 'O', 'X'},{'X','O','O'},{'O','X','X'}};
+			char[][] board3 = new char[][]{{'O', 'O', 'X'},{' ','X',' '},{'X',' ',' '}};
+			assertEquals(true, TicTacToe.checkIfWon(board1));
+			assertEquals(false, TicTacToe.checkIfWon(board2));
+			assertEquals(true, TicTacToe.checkIfWon(board3));
+		}
 }
