@@ -1,4 +1,3 @@
-package is.ru.tictactoe;
 
 public class TicTacToe{
 
@@ -45,7 +44,7 @@ public class TicTacToe{
                 {
                         for(int j = 0; j < col; j++)
                         {
-                                board[i][j] = 0;
+                                board[i][j] = ' ';
                         }
                 }
         }
@@ -57,7 +56,7 @@ public class TicTacToe{
                         {
                                 if(j < col - 1)
                                 {
-                                        if(board[i][j] == 0)
+                                        if(board[i][j] == ' ')
                                         {
                                                 System.out.print(" " + " | ");
                                         }
@@ -68,7 +67,7 @@ public class TicTacToe{
                                 }
                                 else
                                 {
-                                        if(board[i][j] == 0)
+                                        if(board[i][j] == ' ')
                                         {
                                                 System.out.print("   ");
                                         }
@@ -88,21 +87,21 @@ public class TicTacToe{
         }
 
 	public static boolean checkIfWon(char[][] board){
-		if(board[0][0] == board[1][1] && board[1][1] == board[2][2])
+		if(board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[1][1] != ' ')
 		{
 			return true;
 		}
-		if(board[0][2] == board[1][1] && board[1][1] == board[2][0])
+		if(board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[2][0] != ' ')
 		{
 			return true;
 		}
 		for(int i = 0; i < rows; i++)
 		{
-			if(board[0][i] == board[1][i] && board[1][i] == board[2][i])
+			if(board[0][i] == board[1][i] && board[1][i] == board[2][i] && board[1][i] != ' ')
 			{
 				return true;
 			}
-			if(board[i][0] == board[i][1] && board[i][1] == board[i][2])
+			if(board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][2] != ' ')
 			{
 				return true;
 			}

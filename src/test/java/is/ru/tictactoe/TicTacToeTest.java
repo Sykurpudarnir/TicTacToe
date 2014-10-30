@@ -36,8 +36,11 @@ public class TicTacToeTest{
 			char[][] board1 = new char[][]{{'X', 'O', 'O'},{'X','X','O'},{'O','X','X'}};
 			char[][] board2 = new char[][]{{'X', 'O', 'X'},{'X','O','O'},{'O','X','X'}};
 			char[][] board3 = new char[][]{{'O', 'O', 'X'},{' ','X',' '},{'X',' ',' '}};
+			char[][] board4 = new char[][]{{'O', 'O', 'X'},{' ','X',' '},{' ',' ',' '}};
+
 			assertEquals(true, TicTacToe.checkIfWon(board1));
 			assertEquals(false, TicTacToe.checkIfWon(board2));
 			assertEquals(true, TicTacToe.checkIfWon(board3));
+			assertEquals(false, TicTacToe.checkIfWon(board4));
 		}
 }
