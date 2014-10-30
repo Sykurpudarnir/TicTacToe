@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 package is.ru.tictactoe;
+=======
+>>>>>>> 809e96fc4c380998728f0aba55720207db1b4abd
 
 public class TicTacToe{
         public static String inputFromUser(String text)
