@@ -1,0 +1,3 @@
+#!/bin/bash
+./gradlew build
+scp build/libs/TicTacToe.jar sykurpudi@hordur.me:
