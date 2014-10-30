@@ -1,4 +1,5 @@
 package is.ru.tictactoe;
+import java.util.Scanner;
 public class TicTacToe{
 
 	static int player1 = 0;
@@ -22,14 +23,17 @@ public class TicTacToe{
 
 	public static String Players(int player)
 	{
+		
 		if(player == 1) {
 			player1 = player;
 			player2 = 2;
+			System.out.println("You chose to be player1");
 			return "You chose to be player1";
 		}
 		else if(player == 2){
 			player2 = player;
 			player1 = 1;
+			System.out.println("You chose to be player2");
 			return "You chose to be player2";
 		}
 		else
@@ -135,5 +139,10 @@ public class TicTacToe{
 
         public static void main(String[] args) {
                 printBoard(newBoard());
+		System.out.println("Do you want to be player1 or player2? chosee 1 for player1 and 2 for player2");
+		int player;
+		Scanner in = new Scanner(System.in);
+		player = in.nextInt();
+		Players(player);
 	}
 }
