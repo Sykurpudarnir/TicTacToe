@@ -39,3 +39,15 @@ jar {
  attributes("Main-Class": "is.ru.tictactoe.TicTacToe")
  } 
 }
+
+uploadArchives {
+	repositories {
+		ivy {
+			credentials {
+				username "sykurpudi"
+				password "sugasuga6xy"
+			}
+			url "http://hordur.me"
+		}
+	}
+}
