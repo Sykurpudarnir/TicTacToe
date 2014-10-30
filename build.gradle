@@ -39,3 +39,4 @@ jar {
  attributes("Main-Class": "is.ru.tictactoe.TicTacToe")
  } 
 }
+
