@@ -16,9 +16,8 @@ Before running into programming the team descided to create the following classe
 
 Board                    | TicTacToe               |
 -------------------------|--------------------------
-*New board*              |* Player 1*              | 
--------------------------|--------------------------
-*Print board*            |* Player 2*              |
+*New board*              |*Player 1*               | 
+*Print board*            |*Player 2*               |
 
 
 ## Team members
