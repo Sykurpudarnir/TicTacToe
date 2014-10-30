@@ -54,7 +54,17 @@ public class TicTacToeTest{
 			char[][] board5 = new char[][]{{'O', 'O', 'X'},{'O','X','X'},{'O','X',' '}};
 			assertEquals(2, TicTacToe.checkIfWon(board5));
 		}
-
+		
+		@Test
+                public void testPlayer1()
+                {
+                        assertEquals("You chose to be player1", TicTacToe.Players(1));
+                }
+		@Test
+		public void testPlayer2()
+		{
+			assertEquals("You chose to be player2", TicTacToe.Players(2));
+		}
 		@Test
 		public void testWinnerRow()
 		{
