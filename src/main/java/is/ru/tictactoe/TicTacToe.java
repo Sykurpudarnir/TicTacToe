@@ -150,12 +150,12 @@ public class TicTacToe{
                                  }
                          }
                  }
-                 if(count == 10){
-                         break;
+                 if(count == 11){
+                        System.out.println("Game has finished. It was a draw!");
+                        break;
                  }
-         }
-         System.out.println("Game has finished. It was a draw!");
-         return "Game has finished. It was a draw!";
+        }
+         return "Let's play again!";
  }
 
 
