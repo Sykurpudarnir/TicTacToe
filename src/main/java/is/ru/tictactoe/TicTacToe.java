@@ -135,6 +135,10 @@ public class TicTacToe{
                          }
                  }
                  else if(count % 2 == 0){
+			if (count == 10) {
+                        System.out.println("Game has finished. It was a draw!");
+			break;
+			}
                          System.out.println("computers turn");
                          for(int i = 0; i < 3; i++){
                                  for(int j = 0; j < 3; j++){
