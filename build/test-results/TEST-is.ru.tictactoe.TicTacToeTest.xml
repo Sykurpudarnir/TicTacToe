@@ -1,23 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testsuite name="is.ru.tictactoe.TicTacToeTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2014-10-30T23:29:36" hostname="i-3a29db7a" time="0.038">
   <properties/>
   <testcase name="testNotXO" classname="is.ru.tictactoe.TicTacToeTest" time="0.002"/>
   <testcase name="testXoreO" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
   <testcase name="testPlayer1" classname="is.ru.tictactoe.TicTacToeTest" time="0.023"/>
+=======
+<testsuite name="is.ru.tictactoe.TicTacToeTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2014-10-31T00:39:43" hostname="i-3a29db7a" time="0.044">
+  <properties/>
+  <testcase name="testNotXO" classname="is.ru.tictactoe.TicTacToeTest" time="0.003"/>
+  <testcase name="testXoreO" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
+  <testcase name="testPlayer1" classname="is.ru.tictactoe.TicTacToeTest" time="0.021"/>
+>>>>>>> 3f38446c15a67bc5243a9b42b99389bba20189f9
   <testcase name="testPlayer2" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
   <testcase name="testPlayers" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
   <testcase name="testX" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
   <testcase name="testWinnerCol" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
   <testcase name="testWinnerRow" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
+<<<<<<< HEAD
   <testcase name="testWinnerDiag" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
+=======
+  <testcase name="testWinnerDiag" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
+>>>>>>> 3f38446c15a67bc5243a9b42b99389bba20189f9
   <testcase name="testWinnerLost" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
   <system-out><![CDATA[You chose to be player1
 You chose to be player2
 You chose to be player2
-Congratulations player2, you won!!!
-Congratulations player1, you won!!!!
+YOU LOST!! The computer won!!
 Congratulation player1, you won!!!!
-Congratulation player1, you won!!!
+Congratulation player1, you won!!!!
+Congratulation player1, you won!!!!
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
