@@ -1,49 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testsuite name="is.ru.tictactoe.TicTacToeTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2014-10-30T23:22:26" hostname="i-3a29db7a" time="0.09">
+<testsuite name="is.ru.tictactoe.TicTacToeTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2014-10-30T23:29:36" hostname="i-3a29db7a" time="0.038">
   <properties/>
-  <testcase name="testNotXO" classname="is.ru.tictactoe.TicTacToeTest" time="0.005"/>
+  <testcase name="testNotXO" classname="is.ru.tictactoe.TicTacToeTest" time="0.002"/>
   <testcase name="testXoreO" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
-  <testcase name="testPlayer1" classname="is.ru.tictactoe.TicTacToeTest" time="0.05"/>
-  <testcase name="testPlayer2" classname="is.ru.tictactoe.TicTacToeTest" time="0.002"/>
-  <testcase name="testPlayers" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
-  <testcase name="testX" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
-  <testcase name="testWinnerCol" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
-  <testcase name="testWinnerRow" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
-  <testcase name="testWinnerDiag" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
-=======
-<<<<<<< HEAD
-<testsuite name="is.ru.tictactoe.TicTacToeTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2014-10-30T22:38:12" hostname="i-3a29db7a" time="0.045">
-=======
-<<<<<<< HEAD
-<testsuite name="is.ru.tictactoe.TicTacToeTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2014-10-30T21:10:46" hostname="i-3a29db7a" time="0.044">
-  <properties/>
-  <testcase name="testNotXO" classname="is.ru.tictactoe.TicTacToeTest" time="0.004"/>
-  <testcase name="testXoreO" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
-  <testcase name="testPlayer1" classname="is.ru.tictactoe.TicTacToeTest" time="0.022"/>
-  <testcase name="testPlayer2" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
-  <testcase name="testPlayers" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
-  <testcase name="testX" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
-  <testcase name="testWinnerCol" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
-  <testcase name="testWinnerRow" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
-  <testcase name="testWinnerDiag" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
-  <testcase name="testWinnerLost" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
-=======
-<testsuite name="is.ru.tictactoe.TicTacToeTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2014-10-30T21:53:55" hostname="i-3a29db7a" time="0.046">
->>>>>>> 03ee85ace284804a07f05461d50e116affdd94f4
-  <properties/>
-  <testcase name="testNotXO" classname="is.ru.tictactoe.TicTacToeTest" time="0.003"/>
-  <testcase name="testXoreO" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
-  <testcase name="testPlayer1" classname="is.ru.tictactoe.TicTacToeTest" time="0.022"/>
+  <testcase name="testPlayer1" classname="is.ru.tictactoe.TicTacToeTest" time="0.023"/>
   <testcase name="testPlayer2" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
   <testcase name="testPlayers" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
   <testcase name="testX" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
   <testcase name="testWinnerCol" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
   <testcase name="testWinnerRow" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
-  <testcase name="testWinnerDiag" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
->>>>>>> fab5bee55d59743814438b5719c602edd68104c2
+  <testcase name="testWinnerDiag" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
   <testcase name="testWinnerLost" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
->>>>>>> 4ca6d750d3b28165f93a8f01f840effb6fc04738
   <system-out><![CDATA[You chose to be player1
 You chose to be player2
 You chose to be player2
