@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<testsuite name="is.ru.tictactoe.TicTacToeTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2014-10-31T01:16:41" hostname="i-3a29db7a" time="0.036">
+  <properties/>
+  <testcase name="testWinnerCol" classname="is.ru.tictactoe.TicTacToeTest" time="0.028"/>
+  <testcase name="testWinnerRow" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
+  <testcase name="testWinnerDiag" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
+  <testcase name="testWinnerLost" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
+  <system-out><![CDATA[YOU LOST!! The computer won!!
+=======
 <testsuite name="is.ru.tictactoe.TicTacToeTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2014-10-31T12:45:34" hostname="i-3a29db7a" time="0.048">
   <properties/>
   <testcase name="testNotXO" classname="is.ru.tictactoe.TicTacToeTest" time="0.002"/>
@@ -15,6 +24,7 @@
 You chose to be player2
 You chose to be player2
 YOU LOST!! The computer won!!
+>>>>>>> d1cf287320b7ca6a3b2c9a3da936155f749184a9
 Congratulation player1, you won!!!!
 Congratulation player1, you won!!!!
 Congratulation player1, you won!!!!
