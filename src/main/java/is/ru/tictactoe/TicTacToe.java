@@ -139,6 +139,6 @@ public static boolean playersTurn(char[][] board, int row, int column){
 		int column = 2;
 		Board.newBoard();
 		TicTacToe.playGame(Board.board, row, column);
-		//Board.printBoard(Board.board); //This will not be used in the Web version.
+		Board.printBoard(Board.board);
 	}
 }
