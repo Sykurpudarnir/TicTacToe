@@ -15,7 +15,7 @@
 	100% Ready, the code has been writting using TDD.
 
 6. The code should be loosely coupled and follow good object oriented design practices.
-	50% Ready, please confirm that everything is in order.
+	100% Ready, please confirm that everything is in order.
 
 EXTRAS
 
