@@ -21,6 +21,11 @@ repositories {
     jcenter()
 }
 
+sourceSets {
+    selenium
+    seleniumXvfb
+}
+
 // In this section you declare the dependencies for your production and test code
 dependencies {
     // The production code uses the SLF4J logging API at compile time
@@ -31,8 +36,53 @@ dependencies {
     // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
     // 'test.useTestNG()' to your build script.
     testCompile "junit:junit:4.11"
+
+    compile 'net.joningi:icndb-java-api:1.0'
+    compile 'com.sparkjava:spark-core:1.1.1'
+
+    seleniumCompile 'junit:junit:4.11'
+    seleniumCompile 'org.seleniumhq.selenium:selenium-java:2.39.0'
+
+    seleniumXvfbCompile 'junit:junit:4.11'
+    seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-java:2.39.0'
 }
 
+mainClassName = "is.ru.tictactoe.TicTacToe"
+
+task selenium(type: Test, dependsOn: installApp) {
+    testClassesDir = sourceSets.selenium.output.classesDir
+    classpath = sourceSets.selenium.runtimeClasspath
+
+    ant.condition(property: "os", value: "windows") { os(family: "windows") }
+    ant.condition(property: "os", value: "unix"   ) { os(family: "unix")    }
+
+    doFirst {
+        switch(ant.properties.os) {
+            case 'unix':
+                'build/install/sparkIt/bin/sparkIt &'.execute()
+                break
+            case 'windows':
+                'build\\install\\sparkIt\\bin\\sparkIt.bat'.execute()
+                break
+        }
+    }
+}
+
+task seleniumXvfb(type: Test, dependsOn: installApp) {
+    testClassesDir = sourceSets.selenium.output.classesDir
+    classpath = sourceSets.selenium.runtimeClasspath
+
+    environment "DISPLAY", ":99"
+
+    doFirst {
+        'bin/xvfb start'.execute()
+        'build/install/sparkIt/bin/sparkIt &'.execute()
+    }
+    
+    doLast {
+        'bin/xvfb stop'.execute()
+    }
+}
 
 jar {
  manifest {
@@ -42,4 +92,10 @@ jar {
 
 task stage { 
 	dependsOn installApp
+}
+
+test {
+    testLogging {
+        exceptionFormat = 'full'
+    }
 }
