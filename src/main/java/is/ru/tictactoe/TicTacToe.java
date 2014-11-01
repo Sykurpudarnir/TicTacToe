@@ -7,60 +7,6 @@ public class TicTacToe{
 	static int player2 = 0;
 	public static int count = 1;
 
-	public static String checkIfWon(char[][] board){
-		if(board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[1][1] != ' ')
-        	{
-                	if(board[0][0] == 'X'){
-                        	System.out.println("Congratulation player1, you won!!!!");
-                        	return "Congratulation player1, you won!!!!";
-                	}
-                	else{
-                        	System.out.println("YOU LOST!! The computer won!!");
-                        	return "YOU LOST!! The computer won!!";
-                	}
-        	}
-
-        	if(board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[2][0] != ' ')
-		{
-                	if(board[0][2] == 'X'){
-                        	System.out.println("Congratulation player1, you won!!!!");
-                       		return "Congratulation player1, you won!!!!";
-                	}	
-                	else{
-                        	System.out.println("YOU LOST!! The computer won!!");
-                        	return "YOU LOST!! The computer won!!";
-                	}
-        	}	
-
-        	for(int i = 0; i < 3; i++)
-        	{
-                	if(board[0][i] == board[1][i] && board[1][i] == board[2][i] && board[1][i] != ' ')
-                	{
-                        	if(board[0][i] == 'X'){
-                                	System.out.println("Congratulation player1, you won!!!!");
-                                	return "Congratulation player1, you won!!!!";
-                        	}
-                        	else{
-                                	System.out.println("YOU LOST!! The computer won!!");
-                                	return "YOU LOST!! The computer won!!";
-                        	}
-                	}
-	
-                	if(board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][2] != ' ')
-                	{
-                        	if(board[i][0] == 'X'){
-                                	System.out.println("Congratulation player1, you won!!!!");
-                                	return "Congratulation player1, you won!!!!";
-                        	}
-                        	else{
-                                	System.out.println("YOU LOST!! The computer won!!");
-                                	return "YOU LOST!! The computer won!!";
-                        	}
-                	}	
-        	}
-
-        	return "continue";
-	}
 
 	public static String checkIfWon(char[][] board){
         if(board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[1][1] != ' ')

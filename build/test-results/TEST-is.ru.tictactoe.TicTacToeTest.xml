@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.ru.tictactoe.TicTacToeTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2014-11-01T17:00:08" hostname="i-3a29db7a" time="0.029">
+<testsuite name="is.ru.tictactoe.TicTacToeTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2014-11-01T19:28:55" hostname="i-3a29db7a" time="0.042">
   <properties/>
   <testcase name="testWinnerCol" classname="is.ru.tictactoe.TicTacToeTest" time="0.024"/>
-  <testcase name="testWinnerRow" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
+  <testcase name="testWinnerRow" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
   <testcase name="testWinnerDiag" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
-  <testcase name="testWinnerLost" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
+  <testcase name="testWinnerLost" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
+  <testcase name="testNewBoard" classname="is.ru.tictactoe.TicTacToeTest" time="0.004"/>
   <system-out><![CDATA[YOU LOST!! The computer won!!
 Congratulation player1, you won!!!!
 Congratulation player1, you won!!!!
