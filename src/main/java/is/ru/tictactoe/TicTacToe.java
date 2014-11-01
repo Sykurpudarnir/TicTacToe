@@ -99,37 +99,38 @@ public class TicTacToe{
 }
 
 
-	public static void playersTurn(char[][] board){
+	public static boolean playersTurn(char[][] board, int row, int column){
 		Scanner user_input = new Scanner(System.in);
-
+		boolean result = false;
 		System.out.println("player 1's turn");
-		int xcoordinate;
 		do{
 			System.out.println("Select which row from 0-2 you wish to place your symbol");
 			while(!user_input.hasNextInt()){
 				System.out.println("That's not a number! Input the NUMBER of the row you wish to place your symbol! :)");
 				user_input.next();
 			}
-			xcoordinate = user_input.nextInt();
-		} while(!(xcoordinate >= 0) || !(xcoordinate < 3));
+			row = user_input.nextInt();
+		} while(!(row >= 0) || !(row< 3));
 
-		int ycoordinate;
 		do{
 			System.out.println("Select which column from 0-2 you wish to place your symbol.");
 			while(!user_input.hasNextInt()){
 				System.out.println("That's not a number! Input the NUMBER of the column you wish to place your symbol! :)");
 				user_input.next();
 			}
-			ycoordinate = user_input.nextInt();
-		}while(!(ycoordinate >= 0) || !(ycoordinate < 3));
+			column = user_input.nextInt();
+		}while(!(column >= 0) || !(column < 3));
 
-		if(Board.board[xcoordinate][ycoordinate] == ' '){
-			Board.board[xcoordinate][ycoordinate]  = 'X';
+		if(row < 3 && row >= 0 && column < 3 && column >= 0 && Board.board[row][column] == ' '){
+			Board.board[row][column]  = 'X';
 			count++;
+			result = true;
 		}
 		else{
 			System.out.println("Oh no!! that place is already occupied, choose another place for your symbol :)");
+			result = false;
 		}
+		return result;
 	}
 
 
@@ -151,12 +152,12 @@ public class TicTacToe{
 	}
 
 
-	public static String playGame(){
+	public static String playGame(char[][] board, int row, int column){
 
 		while(checkIfWon(Board.board) == "continue"){
 
 			if(count%2 != 0){
-				TicTacToe.playersTurn(Board.board);
+				TicTacToe.playersTurn(Board.board, row, column);
 			}
 
 			else if(count % 2 == 0){
@@ -173,8 +174,10 @@ public class TicTacToe{
 
 
 	public static void main(String[] args) {
+		int row = 1;
+		int column = 2;
 		Board.newBoard();
-		TicTacToe.playGame();
+		TicTacToe.playGame(Board.board, row, column);
 		Board.printBoard(Board.board);
 
 	}

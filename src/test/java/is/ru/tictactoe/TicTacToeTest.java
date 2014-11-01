@@ -71,4 +71,11 @@ public class TicTacToeTest{
 			char[][] board6 = new char[][]{{'O', 'O', 'X'},{'X','X','X'},{'O','X','O'}};
                         assertEquals("Congratulation player1, you won!!!!", TicTacToe.checkIfWon(board6));
 		}
+		
+/*		@Test
+		public void testPlayersTurn()
+		{
+			char[][] board7 = new char[][]{{'O',' ','X'},{' ','X','O'},{' ',' ','O'}};
+			assertEquals(false, TicTacToe.playersTurn(board7, 2, 2));
+		}*/
 }
