@@ -126,7 +126,7 @@ public class TicTacToe{
 			else if(count % 2 == 0){
 				TicTacToe.computersTurn(Board.board);
 			}
-			if(count == 10){
+			if(count == 11){
 				System.out.println("Game has finished. It was a draw!");
 				break;
 			}
