@@ -2,14 +2,11 @@ package is.ru.tictactoe;
 import java.util.Scanner;
 public class TicTacToe{
 
-<<<<<<< HEAD
 //	static int player1 = 0;
 //	static int player2 = 0;
-=======
 	static int player1 = 0;
 	static int player2 = 0;
 	public static int count = 1;
->>>>>>> d1cf287320b7ca6a3b2c9a3da936155f749184a9
 
   /*     public static String inputFromUser(String text)
         {	
