@@ -14,10 +14,10 @@ How to setup and get it to run on a fresh machine..
 
 Áður en forritunin hófst setti teymið upp eftirfarandi klasarit til að vinna út frá.
 
-Board                    | TicTacToe               | Player             |
--------------------------|-----------------------------------------------
-*New board*              |*checkIfWon()*           | *Player 1*         |
-*Print board*            |*playGame*               | *Player 2*         |
+Board                    | TicTacToe               | Player             
+-------------------------|--------------------------------------
+*New board*              |*checkIfWon()*           | *Player 1*         
+*Print board*            |*playGame*               | *Player 2*         
 
 Teymið gerir ráð fyrir því að klasaritið taki breytinum eftir því sem líður á verkefnið. Eigindin og föllin eru undir klasaheitunum í ritinu.
 
