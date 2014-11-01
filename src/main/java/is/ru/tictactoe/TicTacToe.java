@@ -2,8 +2,8 @@ package is.ru.tictactoe;
 import java.util.Scanner;
 public class TicTacToe{
 
-	static int player1 = 0;
-	static int player2 = 0;
+//	static int player1 = 0;
+//	static int player2 = 0;
 	public static int count = 1;
 
 
