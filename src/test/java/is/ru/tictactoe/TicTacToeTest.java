@@ -6,7 +6,7 @@ public class TicTacToeTest{
         public static void main(String arg[]){
         org.junit.runner.JUnitCore.main("is.ru.tictactoe.TicTacToeTest");
         }
-                @Test
+                /*@Test
                 public void testXoreO()
                 {
                         assertEquals("O", TicTacToe.inputFromUser("O"));
@@ -28,7 +28,7 @@ public class TicTacToeTest{
 		public void testPlayers()
 		{
 			assertEquals("You chose to be player2", TicTacToe.Players(2));
-		}
+		}*/
 
 		@Test
 		public void testWinnerLost()
@@ -55,7 +55,7 @@ public class TicTacToeTest{
 			assertEquals("YOU LOST!! The computer won!!", TicTacToe.checkIfWon(board5));
 		}
 		
-		@Test
+		/*@Test
                 public void testPlayer1()
                 {
                         assertEquals("You chose to be player1", TicTacToe.Players(1));
@@ -64,7 +64,7 @@ public class TicTacToeTest{
 		public void testPlayer2()
 		{
 			assertEquals("You chose to be player2", TicTacToe.Players(2));
-		}
+		}*/
 		@Test
 		public void testWinnerRow()
 		{

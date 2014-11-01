@@ -2,10 +2,10 @@ package is.ru.tictactoe;
 import java.util.Scanner;
 public class TicTacToe{
 
-	static int player1 = 0;
-	static int player2 = 0;
+//	static int player1 = 0;
+//	static int player2 = 0;
 
-       public static String inputFromUser(String text)
+  /*     public static String inputFromUser(String text)
         {	
                 if(text.equals("X"))
                 {
@@ -19,9 +19,9 @@ public class TicTacToe{
 		{
 			return "Please choose either X or O";
 		}
-        }
+        }*/
 
-	public static String Players(int player)
+/*	public static String Players(int player)
 	{
 		
 		if(player == 1) {
@@ -40,7 +40,7 @@ public class TicTacToe{
 		{
 			return "Please choose 1 for player1 and 2 for player2";
 		}
-	}
+	}*/
 
 	public static String checkIfWon(char[][] board){
         if(board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[1][1] != ' ')
