@@ -2,48 +2,10 @@ package is.ru.tictactoe;
 import java.util.Scanner;
 public class TicTacToe{
 
-//	static int player1 = 0;
-//	static int player2 = 0;
 	static int player1 = 0;
 	static int player2 = 0;
 	public static int count = 1;
 
-  /*     public static String inputFromUser(String text)
-        {	
-                if(text.equals("X"))
-                {
-                        return "X";
-                }
-		else if(text.equals("O"))
-		{
-			return "O";
-		}
-                else
-		{
-			return "Please choose either X or O";
-		}
-        }*/
-
-/*	public static String Players(int player)
-	{
-		
-		if(player == 1) {
-			player1 = player;
-			player2 = 2;
-			System.out.println("You chose to be player1");
-			return "You chose to be player1";
-		}
-		else if(player == 2){
-			player2 = player;
-			player1 = 1;
-			System.out.println("You chose to be player2");
-			return "You chose to be player2";
-		}
-		else
-		{
-			return "Please choose 1 for player1 and 2 for player2";
-		}
-	}*/
 
 	public static String checkIfWon(char[][] board){
         if(board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[1][1] != ' ')
