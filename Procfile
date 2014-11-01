@@ -1,1 +1,1 @@
-web: build/install/sparkIt/bin/sparkIt
+web: build/install/tictactoe/bin/tictactoe
