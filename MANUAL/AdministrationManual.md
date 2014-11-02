@@ -1,4 +1,4 @@
-###Stjórnunar leiðbeiningar (e.Administration Manual)
+###Stjórnunarleiðbeiningar (e.Administration Manual)
 ####Eftirfarandi þarf að hafa í huga:
 
 1. Ef notandi er ekki búinn að setja upp git á skelina, þá er nauðsynlegt að byrja á því.
