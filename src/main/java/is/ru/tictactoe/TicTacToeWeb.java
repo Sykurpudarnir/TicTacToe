@@ -1,4 +1,4 @@
-/*package is.ru.tictactoe;
+package is.ru.tictactoe;
 import java.util.Scanner;
 
 import static spark.Spark.*;
@@ -10,11 +10,13 @@ public class TicTacToeWeb{
 	public static void main(String[] args) {
 
 
-		staticFileLocation("/public");
+	staticFileLocation("/public");
         setPort(Integer.valueOf(System.getenv("PORT")));
-        final Game tictactoe = new Game();
+        final TicTacToe tictactoe = new TicTacToe();
+	final Board board = new Board();	
+	
 
-         post(new Route("/add") 
+        post(new Route("/add") 
         {
             @Override
        		public Object handle(Request request, Response response)
@@ -37,23 +39,18 @@ public class TicTacToeWeb{
             		col = pos - 6;
             	}
 
-            	String sym = Character.toString(tictactoe.current.getSymbol());
+		board = new char[row][col];
 
-				if(tictactoe.checkIfWinner()){
-					String ret = sym + "WINS";
-					return ret;
-				}
-				if(tictactoe.checkIfTie()){
-					return "Tie";
+
+            	//String sym = Character.toString(tictactoe.current.getSymbol());
+
+				if(tictactoe.checkIfWon()){
+					return;
 				}
 				else{
-					tictactoe.makeMove(row, col);
-					if(tictactoe.checkIfWinner()){
-						String ret = sym + "WINS";
-						return ret;
-					}
-					if(tictactoe.checkIfTie()){
-						return "Tie";
+					tictactoe.playGame(board, row, col);
+					if(tictactoe.checkIfWon()){
+						return;
 					}
 					return sym;
 					
@@ -65,4 +62,4 @@ public class TicTacToeWeb{
 		});
 
 	}
-}*/
+}

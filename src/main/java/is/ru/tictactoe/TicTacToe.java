@@ -3,8 +3,6 @@ import java.util.Scanner;
 
 public class TicTacToe{
 
-//	static int player1 = 0;
-//	static int player2 = 0;
 	public static int count = 1;
 
 
@@ -126,7 +124,7 @@ public static boolean playersTurn(char[][] board, int row, int column){
 
 			}
 			if(count == 10){
-				if(checkIfWon(board) == "continue")
+				if(!checkIfWon(board))
 				{
 					System.out.println("Game has finished. It was a draw!");
 					break;
