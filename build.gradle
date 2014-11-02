@@ -11,6 +11,8 @@
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 apply plugin: 'application'
+apply plugin: 'coveralls'
+apply plugin: 'jacoco'
 
 mainClassName = "is.ru.tictactoe.TicTacToe"
 
@@ -24,6 +26,23 @@ repositories {
 sourceSets {
     selenium
     seleniumXvfb
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+ 
+    dependencies {
+        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:0.3.0'
+    }
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled = true
+        html.enabled = true
+    }
 }
 
 // In this section you declare the dependencies for your production and test code
