@@ -4,21 +4,8 @@ import java.util.Scanner;
 public class TicTacToe{
 
 	public static int count = 1;
-/*	public static int moves = 1;
 
-	public static char getSymbol() {
-		if(moves % 2 == 0) {
-			return 'O';
-		} else {
-		return 'X';
-	}
 
-	public static void makeMove(char[][] board, row, column) {
-		char sym = getSymbol();
-		board[row][column] = sym;
-		moves++;
-	}
-*/
 	public static boolean checkIfWon(char[][] board){
         if(board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[1][1] != ' ')
         {
@@ -70,40 +57,52 @@ public class TicTacToe{
         return false;
 }
 
-public static boolean playersTurn(char[][] board, int row, int column){
-		Scanner user_input = new Scanner(System.in);
-		boolean result = false;
-		System.out.println("player 1's turn");
-		do{
-			System.out.println("Select which row from 0-2 you wish to place your symbol");
-			while(!user_input.hasNextInt()){
-				System.out.println("That's not a number! Input the NUMBER of the row you wish to place your symbol! :)");
-				user_input.next();
-			}
-			row = user_input.nextInt();
-		} while(!(row >= 0) || !(row < 3));
+	
 
-		do{
-			System.out.println("Select which column from 0-2 you wish to place your symbol.");
-			while(!user_input.hasNextInt()){
-				System.out.println("That's not a number! Input the NUMBER of the column you wish to place your symbol! :)");
-				user_input.next();
-			}
-			column = user_input.nextInt();
-		}while(!(column >= 0) || !(column < 3));
+	public static boolean playersTurn(char[][] board, int row, int column){
+ 		Scanner user_input = new Scanner(System.in);
+ 		boolean result = false;
+ 	//	int row = 1;
+ 	//	int column = 1;
+ 	//	if(board[rows][col] == ' ')
+ 	//	{
+        //		board[rows][col] = 'X';
+          //      	Board.printBoard(board);
+            //    	return true;
+       // 	}
+        	System.out.println("player 1's turn");
+        	do{
+          		System.out.println("Select which row from 0-2 you wish to place your symbol");
+                	while(!user_input.hasNextInt()){
+                		System.out.println("That's not a number! Input the NUMBER of the row you wish to place your symbol! :)");
+                        	user_input.next();
+                	}
+                	row = user_input.nextInt();
+        	} while(!(row >= 0) || !(row < 3));
 
-		if(board[row][column] == ' '){
-			board[row][column]  = 'X';
-			count++;
-			Board.printBoard(board);
-			return true;
-		}
-		else{
-			System.out.println("Oh no!! that place is already occupied, choose another place for your symbol :)");
-		}
-		return result;
+        	do{
+          		System.out.println("Select which column from 0-2 you wish to place your symbol.");
+                	while(!user_input.hasNextInt()){
+                		System.out.println("That's not a number! Input the NUMBER of the column you wish to place your symbol! :)");
+                        	user_input.next();
+                	}
+                	column = user_input.nextInt();
+        	}while(!(column >= 0) || !(column < 3));
+
+        	if(board[row][column] == ' ')
+		{
+        		board[row][column]  = 'X';
+                        //count++;
+                	Board.printBoard(board);
+                	return true;
+        	}
+        	else
+		{
+        		System.out.println("Oh no!! that place is already occupied, choose another place for your symbol :)");
+        	}
+        	return result;
+        
 	}
-
 	public static boolean computersTurn(char[][] board){
 		System.out.println("computers turn");
 		outerloop:
@@ -111,47 +110,51 @@ public static boolean playersTurn(char[][] board, int row, int column){
 			for(int j = 0; j < 3; j++){
 				if(board[i][j] == ' '){
 					board[i][j] = 'O';
-					count++;
+			//		count++;
 					Board.printBoard(board);
 					break outerloop;
 				}
 			}
 		}
-		if(count % 2 == 0){
+		if(count % 2 != 0){
 			return true;
 		}
 		
 		return false;
 	}
 
-	public static String playGame(char[][] board, int row, int column){
-
-		while(!checkIfWon(Board.board)){
-
+	public static String playGame(char[][] board, int count){
+		while(!checkIfWon(board)){
 			if(count%2 != 0){
-				TicTacToe.playersTurn(Board.board, row, column);
+				int row = 1;
+				int column = 1;
+				
+				TicTacToe.playersTurn(board, row, column);
+				
 			}
-
 			else if(count % 2 == 0){
-				TicTacToe.computersTurn(Board.board);
+				TicTacToe.computersTurn(board);
+				
 
 			}
 			if(count == 10){
 				if(!checkIfWon(board))
 				{
 					System.out.println("Game has finished. It was a draw!");
-					break;
+					return "Game has finished. It was a draw!";
 				}
+			
 			}
+			count++;
 		}
 		return "Lets play again!";
 	}
 
 	public static void main(String[] args) {
-		int row = 1;
-		int column = 2;
+		//int row = 1;
+		//int column = 2;
 		Board.newBoard();
-		TicTacToe.playGame(Board.board, row, column);
+		TicTacToe.playGame(Board.board,count);
 		//Board.printBoard(Board.board); //This will not be used in the Web version.
 	}
 }
