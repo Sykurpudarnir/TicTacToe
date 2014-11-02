@@ -41,12 +41,17 @@ How to setup and get it to run on a fresh machine..
 
 Board                    | TicTacToe               | Player             
 -------------------------|-------------------------|------------
-*New board*              |*checkIfWon()*           | *Player 1*         
-*Print board*            |*playGame*               | *Player 2*         
+*New board()*            |*checkIfWon()*           | *Player 1*         
+*Print board()*          |*playGame()*             | *Player 2*         
 
 Teymið gerir ráð fyrir því að klasaritið taki breytinum eftir því sem líður á verkefnið. Eigindin og föllin eru undir klasaheitunum í ritinu.
 
-Markmiðið er að hanna einfalda útgáfu af leiknum myllu (e. Tic tac toe) þar sem leikmaður keppir við tölvu. Útfærslan á að vera einföld og fylgja hefðbundnum reglum. Við styðjumst við ,,camel casing'' við gerð fallanafna og breytunöfn eru skrifuð með lágstöfum.
+Almennar forritunarreglur
+Til að halda samræmi fer öll forritunin fram á ensku; breytu­, klasa­ og fallanöfn. Eina allar athugasemdir, sem skrifaðar eru við kóðann, á ensku. Klasaheiti og fallanöfn verða  með "Pascal casing”
+, þ.e. fyrsti stafurinn í hverju nýju orði er hástafur. Allt annað   rita�með "Camel casing", þ.e. fyrsta orðið er með lágstaf í upphafi, en orð þar á eftir byrja á hástaf.
+Einnig skiptir miklu máli að hafa kóðann auðlesinn. Passa verður að hafa hverja línu ekki o ekki fleiri en 120 stafi í hverja línu. Auk þess þarf að passa vel uppá inndrátt; línur skulu vera
+dregnar inn með því að notast við “tab” takkann í stað þess að nota bilum föllu skal passa uppá að hafa slaufusviga, óháð því hvort þeir séu nauðsynlegir eða ekki, í þeim tilgangi að forðast
+misskilning.
 
 Gert er ráð fyrir einingaprófum og að þau verði skrifuð jafn óðum og kóðinn sjálfur. Með því styðst teymið við TDD (e. test driven development).
 
