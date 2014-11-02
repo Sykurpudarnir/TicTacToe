@@ -12,7 +12,7 @@
 9. Hægt er að gera breytingar á forritinu með hvaða texta editor sem er.
 10. Til þess að keyra breytingar inn á Travis CI sýndarvél þarf að commita og pusha breytingunum á Github
 11. Hægt er að skoða skýrslu fyrir buildið með því að smella á build hnappinn í README skránni.
-12. Til þess að klára útgáfu skal keyra scriptuna 'Mega Build', það er gert með því að keyra "./bin/mega_build". Við það keyrist upp build proccess með Gradle sem útbýr .jar skrá sem er hægt að finna í build/libs. Einnig keyrir scriptan .jar skránna yfir á annan vefþjón "hordur.me" ásamt því að keyra inn einingarprófsskýrslu á slóðina "hordur.me/sykur".
+12. Til þess að klára útgáfu skal keyra scriptuna 'Mega Build', það er gert með því að keyra "./bin/mega_build". Við það keyrist upp build proccess með Gradle sem útbýr .jar skrá sem er hægt að finna í build/libs. Einnig keyrir scriptan .jar skránna yfir á annan vefþjón "hordur.me" ásamt því að keyra inn einingarprófsskýrslu á slóðina http://hordur.me/sykur
 13. Til þess að keyra leikinn þarf svo að fara inní möppuna build/libs, það er gert með því að skrifa "cd build/libs"
 14. Þá á að vera hægt að keyra leikinn, það er gert með því að skrifa "java -jar TicTacToe.jar"
 15. Testskrárnar eru geymdar inni test möppu, skráin heitir TicTacToeTest.java, slóðin er eftirfarandi: TicTacToe/src/test/java/is/ru/tictactoe/
