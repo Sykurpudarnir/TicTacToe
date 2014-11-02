@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.ru.tictactoe.TicTacToeTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2014-11-02T00:39:51" hostname="i-3a29db7a" time="0.042">
+<testsuite name="is.ru.tictactoe.TicTacToeTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2014-11-02T11:12:44" hostname="i-3a29db7a" time="0.039">
   <properties/>
-  <testcase name="testWinnerCol" classname="is.ru.tictactoe.TicTacToeTest" time="0.025"/>
-  <testcase name="testWinnerRow" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
+  <testcase name="testComputersTurn" classname="is.ru.tictactoe.TicTacToeTest" time="0.028"/>
+  <testcase name="testWinnerCol" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
+  <testcase name="testWinnerRow" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
   <testcase name="testWinnerDiag" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
-  <testcase name="testWinnerLost" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
-  <testcase name="computersTurn" classname="is.ru.tictactoe.TicTacToeTest" time="0.005"/>
-  <testcase name="testNewBoard" classname="is.ru.tictactoe.TicTacToeTest" time="0.004"/>
-  <system-out><![CDATA[YOU LOST!! The computer won!!
-Congratulation player1, you won!!!!
-Congratulation player1, you won!!!!
-Congratulation player1, you won!!!!
-computers turn
+  <testcase name="testWinnerLost" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
+  <testcase name="testNewBoard" classname="is.ru.tictactoe.TicTacToeTest" time="0.002"/>
+  <system-out><![CDATA[computers turn
 X | O |    
 ----------
   |   |    
 ----------
   |   |    
+YOU LOST!! The computer won!!
+Congratulation player1, you won!!!!
+Congratulation player1, you won!!!!
+Congratulation player1, you won!!!!
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
