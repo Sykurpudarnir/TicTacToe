@@ -4,20 +4,7 @@ import java.util.Scanner;
 public class TicTacToe{
 
 	public static int count = 1;
-	public static int moves = 1;
 
-	public static char getSymbol() {
-		if(moves % 2 == 0) {
-			return 'O';
-		} else {
-		return 'X';
-	}
-
-	public static void makeMove(char[][] board, row, column) {
-		char sym = getSymbol();
-		board[row][column] = sym;
-		moves++;
-	}
 
 	public static boolean checkIfWon(char[][] board){
         if(board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[1][1] != ' ')
