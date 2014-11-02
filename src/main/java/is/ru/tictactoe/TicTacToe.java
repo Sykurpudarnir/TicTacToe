@@ -85,10 +85,11 @@ public static boolean playersTurn(char[][] board, int row, int column){
 			column = user_input.nextInt();
 		}while(!(column >= 0) || !(column < 3));
 
-		if(Board.board[row][column] == ' '){
-			Board.board[row][column]  = 'X';
+		if(board[row][column] == ' '){
+			board[row][column]  = 'X';
 			count++;
-			result = true;
+			Board.printBoard(board);
+			return true;
 		}
 		else{
 			System.out.println("Oh no!! that place is already occupied, choose another place for your symbol :)");
@@ -129,8 +130,11 @@ public static boolean playersTurn(char[][] board, int row, int column){
 
 			}
 			if(count == 10){
-				System.out.println("Game has finished. It was a draw!");
-				break;
+				if(checkIfWon(board) == "continue")
+				{
+					System.out.println("Game has finished. It was a draw!");
+					break;
+				}
 			}
 		}
 		return "Lets play again!";
@@ -141,6 +145,6 @@ public static boolean playersTurn(char[][] board, int row, int column){
 		int column = 2;
 		Board.newBoard();
 		TicTacToe.playGame(Board.board, row, column);
-		Board.printBoard(Board.board);
+		//Board.printBoard(Board.board); //This will not be used in the Web version.
 	}
 }

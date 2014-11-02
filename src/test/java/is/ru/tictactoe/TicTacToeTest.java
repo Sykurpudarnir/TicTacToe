@@ -46,9 +46,16 @@ public class TicTacToeTest{
 	}
 
 	@Test
-        public void computersTurn()
+        public void testComputersTurn()
         {
 		char[][] board8 = new char[][]{{'X', ' ', ' '},{' ',' ',' '},{' ',' ',' '}};
                 assertEquals(true, TicTacToe.computersTurn(board8));
         }
+	
+/*	@Test
+        public void testHumanPlayersTurn()
+        {
+                char[][] board9 = new char[][]{{' ', ' ', ' '},{' ',' ',' '},{' ',' ',' '}};
+                assertEquals(true, TicTacToe.playersTurn(board9, 1, 1));
+        }*/
 }
