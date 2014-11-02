@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Board.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">TicTacToe</a> &gt; <a href="index.source.html" class="el_package">is.ru.tictactoe</a> &gt; <span class="el_source">Board.java</span></div><h1>Board.java</h1><pre class="source lang-java linenums">package is.ru.tictactoe;
+
+<span class="nc" id="L3">public class Board{</span>
+
+<span class="fc" id="L5">   	static int col = 3;</span>
+<span class="fc" id="L6">        static int rows = 3;</span>
+
+
+        static char[][] board;
+
+
+        public static char[][] newBoard(){
+<span class="fc" id="L13">                board = new char[rows][col];</span>
+<span class="fc bfc" id="L14" title="All 2 branches covered.">                for(int i = 0; i &lt; rows; i++)</span>
+                {
+<span class="fc bfc" id="L16" title="All 2 branches covered.">                        for(int j = 0; j &lt; col; j++)</span>
+                        {
+<span class="fc" id="L18">                                board[i][j] = ' ';</span>
+                        }
+                }
+<span class="fc" id="L21">                return board;</span>
+        }
+
+        public static void printBoard(char[][] board){
+<span class="fc bfc" id="L25" title="All 2 branches covered.">                for(int i = 0; i &lt; rows; i++)</span>
+                {
+<span class="fc bfc" id="L27" title="All 2 branches covered.">                        for(int j = 0; j &lt; col; j++)</span>
+                        {
+<span class="fc bfc" id="L29" title="All 2 branches covered.">                                if(j &lt; col - 1)</span>
+                                {
+<span class="fc bfc" id="L31" title="All 2 branches covered.">                                        if(board[i][j] == ' ')</span>
+                                        {
+<span class="fc" id="L33">                                                System.out.print(&quot; &quot; + &quot; | &quot;);</span>
+                                        }
+                                        else
+                                        {
+<span class="fc" id="L37">                                                System.out.print(board[i][j] + &quot; | &quot;);</span>
+                                        }
+                                }
+                                else
+                                {
+<span class="pc bpc" id="L42" title="1 of 2 branches missed.">                                        if(board[i][j] == ' ')</span>
+                                        {
+<span class="fc" id="L44">                                                System.out.print(&quot;   &quot;);</span>
+                                        }
+                                        else
+                                        {
+<span class="nc" id="L48">                                                System.out.print(board[i][j]);</span>
+                                        }
+                                }
+                        }
+<span class="fc" id="L52">                        System.out.println();</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">                        if(i &lt; rows - 1)</span>
+                        {
+<span class="fc" id="L55">                                System.out.print(&quot;----------&quot;);</span>
+<span class="fc" id="L56">                                System.out.println();</span>
+                        }
+                }
+<span class="fc" id="L59">        }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.1.201405082137</span></div></body></html>
