@@ -22,3 +22,9 @@ jdk:
 
 after_success:
   - gradle jacocoTestReport coveralls
+  - scp build/libs/TicTacToe.jar hoddmachine@hordur.me:TheGame/
+  - scp build/reports/jacoco/test/html/index.html hoddmachine@hordur.me:sites/hordur.me/html/sykur/ 
+  - scp -r build/reports/jacoco/test/html/is.ru.tictactoe hoddmachine@hordur.me:sites/hordur.me/html/sykur/ 
+  - echo "------------------------------------------------------------------------" 
+  - echo "Mega build successfull, see www.hordur.me/sykur for CodeCoverage report." 
+  - echo "------------------------------------------------------------------------"
