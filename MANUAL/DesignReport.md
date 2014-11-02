@@ -7,7 +7,7 @@ Board                    | TicTacToe               | Player
 *New board()*            |*checkIfWon()*           | *Player 1*
 *Print board()*          |*playGame()*             | *Player 2*
 
-Teymið gerir ráð fyrir því að klasariti? breytingum eftir því sem líður á verkefnið. Eigindin og föllin eru undir klasaheitunum.
+Teymið gerir ráð fyrir því að klasaritið taki breytingum eftir því sem líður á verkefnið. Eigindin og föllin eru undir klasaheitunum.
 
 Almennar forritunarreglur
 Til að halda samræmi fer öll forritunin fram á ensku; breytu­, klasa­ og fallanöfn. Eina allar athugasemdir, sem skrifaðar eru við kóðann, eru á ensku verða  með "Pascal casing", þ.e. fyrsti stafurinn í hverju nýju orði er hástafur. Fallanöfn verða rituð með "Camel casing", þ.e. fyrsta orðið er með lágstaf í upphafi, en orð þar á eftir byrja á hástöfum. Breytunöfn verða skrifuð með lágstöfum.
