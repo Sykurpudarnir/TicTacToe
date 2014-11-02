@@ -81,7 +81,7 @@ public static boolean playersTurn(char[][] board, int row, int column){
 
 		if(board[row][column] == ' '){
 			board[row][column]  = 'X';
-			count++;
+			//count++;
 			Board.printBoard(board);
 			return true;
 		}
@@ -98,38 +98,43 @@ public static boolean playersTurn(char[][] board, int row, int column){
 			for(int j = 0; j < 3; j++){
 				if(board[i][j] == ' '){
 					board[i][j] = 'O';
-					count++;
+			//		count++;
 					Board.printBoard(board);
 					break outerloop;
 				}
 			}
 		}
-		if(count % 2 == 0){
+		if(count % 2 != 0){
 			return true;
 		}
 		
 		return false;
 	}
 
-	public static String playGame(char[][] board, int row, int column){
-
-		while(!checkIfWon(Board.board)){
-
+	public static String playGame(char[][] board, int count){
+		System.out.println(count);
+		while(!checkIfWon(board)){
 			if(count%2 != 0){
-				TicTacToe.playersTurn(Board.board, row, column);
+				int row = 1;
+				int column = 1;
+				
+				TicTacToe.playersTurn(board, row, column);
+				
 			}
-
 			else if(count % 2 == 0){
-				TicTacToe.computersTurn(Board.board);
+				TicTacToe.computersTurn(board);
+				
 
 			}
 			if(count == 10){
 				if(!checkIfWon(board))
 				{
 					System.out.println("Game has finished. It was a draw!");
-					break;
+					return "Game has finished. It was a draw!";
 				}
+			
 			}
+			count++;
 		}
 		return "Lets play again!";
 	}
@@ -138,7 +143,7 @@ public static boolean playersTurn(char[][] board, int row, int column){
 		int row = 1;
 		int column = 2;
 		Board.newBoard();
-		TicTacToe.playGame(Board.board, row, column);
+		TicTacToe.playGame(Board.board,count);
 		//Board.printBoard(Board.board); //This will not be used in the Web version.
 	}
 }

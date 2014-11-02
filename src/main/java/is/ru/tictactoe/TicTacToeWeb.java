@@ -1,4 +1,4 @@
-package is.ru.tictactoe;
+/*package is.ru.tictactoe;
 import java.util.Scanner;
 
 import static spark.Spark.*;
@@ -62,4 +62,4 @@ public class TicTacToeWeb{
 		});
 
 	}
-}
+}*/
