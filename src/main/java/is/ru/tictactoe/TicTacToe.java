@@ -63,17 +63,9 @@ public class TicTacToe{
 
 	
 	//handles the move from the human player
-	public static boolean playersTurn(char[][] board, int row, int column){
+	public static void  playersTurn(char[][] board, int row, int column){
  		Scanner user_input = new Scanner(System.in);
  		boolean result = false;
- 	//	int row = 1;
- 	//	int column = 1;
- 	//	if(board[rows][col] == ' ')
- 	//	{
-        //		board[rows][col] = 'X';
-          //      	Board.printBoard(board);
-            //    	return true;
-       // 	}
         	System.out.println("player 1's turn");
 		//a do while loop that first checks if the user input is a number, and asks user to enter a number
         	do{
@@ -100,15 +92,12 @@ public class TicTacToe{
         		board[row][column]  = 'X';
                         //count++;
                 	Board.printBoard(board);
-                	return true;
         	}
 		//if row and column are not available we give this error message and ask user to try another place for their symbol
         	else
 		{
         		System.out.println("Oh no!! that place is already occupied, choose another place for your symbol :)");
         	}
-        	return result;
-        
 	}
 	//this function executes the computers automatic move
 	public static boolean computersTurn(char[][] board){
@@ -134,7 +123,7 @@ public class TicTacToe{
 	}
 
 	//calls the functions needed to play the game
-	public static void playGame(char[][] board, int count){
+	public static String playGame(char[][] board, int count){
 		//while no one has won the game, the players are asked to keep making their moves
 		while(!checkIfWon(board)){
 			if(count%2 != 0){
@@ -160,6 +149,7 @@ public class TicTacToe{
 			}
 			count++;
 		}
+		return "Lets play again!";
 	}
 
 	public static void main(String[] args) {
