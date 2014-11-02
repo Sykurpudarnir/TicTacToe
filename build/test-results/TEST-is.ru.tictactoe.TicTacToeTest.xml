@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.ru.tictactoe.TicTacToeTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2014-11-02T18:10:38" hostname="i-3a29db7a" time="0.19">
+<testsuite name="is.ru.tictactoe.TicTacToeTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2014-11-02T18:58:13" hostname="i-3a29db7a" time="0.182">
   <properties/>
-  <testcase name="testItsADraw" classname="is.ru.tictactoe.TicTacToeTest" time="0.143"/>
-  <testcase name="testComputersTurn" classname="is.ru.tictactoe.TicTacToeTest" time="0.007"/>
-  <testcase name="testWinnerCol" classname="is.ru.tictactoe.TicTacToeTest" time="0.007"/>
+  <testcase name="testItsADraw" classname="is.ru.tictactoe.TicTacToeTest" time="0.149"/>
+  <testcase name="testComputersTurn" classname="is.ru.tictactoe.TicTacToeTest" time="0.005"/>
+  <testcase name="testWinnerCol" classname="is.ru.tictactoe.TicTacToeTest" time="0.006"/>
   <testcase name="testWinnerRow" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
   <testcase name="testWinnerDiag" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
   <testcase name="testWinnerLost" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
-  <testcase name="testNewBoard" classname="is.ru.tictactoe.TicTacToeTest" time="0.013"/>
+  <testcase name="testNewBoard" classname="is.ru.tictactoe.TicTacToeTest" time="0.006"/>
   <system-out><![CDATA[computers turn
 Game has finished. It was a draw!
 computers turn
