@@ -1,5 +1,5 @@
 ###Stjórnunar leiðbeiningar (e.Administration Manual)
-*Eftirfarandi þarf að hafa í huga *
+####Eftirfarandi þarf að hafa í huga
 
 1. Ef notandi er ekki þegar búinn að setja upp git á skelinni, þá er nauðsynlegt að byrja á því.
 2. Því næst þarf að fara inná www.github.com, og leita að Sykurpudarnir.
