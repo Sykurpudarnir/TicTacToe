@@ -63,8 +63,11 @@ public class TicTacToe{
 
 	
 	//handles the move from the human player
-	public static void  playersTurn(char[][] board, int row, int column){
- 		Scanner user_input = new Scanner(System.in);
+	public static void  playersTurn(char[][] board){
+ 	//	Board board = Board.newBoard;
+		int row = 1;
+		int column = 1;
+		Scanner user_input = new Scanner(System.in);
  		boolean result = false;
         	System.out.println("player 1's turn");
 		//a do while loop that first checks if the user input is a number, and asks user to enter a number
@@ -90,7 +93,6 @@ public class TicTacToe{
         	if(board[row][column] == ' ')
 		{
         		board[row][column]  = 'X';
-                        //count++;
                 	Board.printBoard(board);
         	}
 		//if row and column are not available we give this error message and ask user to try another place for their symbol
@@ -108,7 +110,6 @@ public class TicTacToe{
 			for(int j = 0; j < 3; j++){
 				if(board[i][j] == ' '){
 					board[i][j] = 'O';
-			//		count++;
 					Board.printBoard(board);
 					break outerloop;
 				}
@@ -127,13 +128,12 @@ public class TicTacToe{
 		//while no one has won the game, the players are asked to keep making their moves
 		while(!checkIfWon(board)){
 			if(count%2 != 0){
-				int row = 1;
-				int column = 1;
-				
-				TicTacToe.playersTurn(board, row, column);
+
+				TicTacToe.playersTurn(board);
 				
 			}
 			else if(count % 2 == 0){
+
 				TicTacToe.computersTurn(board);
 				
 
@@ -153,10 +153,7 @@ public class TicTacToe{
 	}
 
 	public static void main(String[] args) {
-		//int row = 1;
-		//int column = 2;
 		Board.newBoard();
 		TicTacToe.playGame(Board.board,count);
-		//Board.printBoard(Board.board); //This will not be used in the Web version.
 	}
 }
