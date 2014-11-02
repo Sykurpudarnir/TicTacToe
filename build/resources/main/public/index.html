@@ -2,19 +2,128 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>TicTacToe by Sykurpudarnir</title>
+    <title>TicTacToe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- load bootstrap for nicer ui -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
- </head>
+
+   <style type="text/css">
+        td
+        {
+          text-align : center; 
+          vertical-align : middle;
+        }
+        h1
+        {
+          text-align: center;
+        }
+        form-inline
+        {
+          padding-left: 500px;
+          padding-top: 50px;
+        }
+        table
+        {
+          padding-left: 450px;
+          width: 300px;
+          height: 300px;
+        }
+        form
+        {
+          padding-left: 450px;
+          padding-top: 30px;
+        }
+        p 
+        {
+          text-align: center;
+          padding-top: 20px;
+        }
+        .btn
+        {
+          width: 100px;
+          height:100px;
+        }
+        input[type="button"]
+        {
+          font-size: 50px;
+        }
+    </style>
+  </head>
 
   <body>
   
   <div class="container">
-    <h1>The one and only TicTacToe</h1>
+    <h1> BEST TicTacToe EVER</h1>
+
+    <form method="post" action="/add" class="form-inline" role="form">
+    <table border="1" width="100">
+      <tr>
+        <td><input type = "button" class="btn" id="0 0" value=" "/></td>
+        <td><input type = "button" class="btn" id="0 1" value=" "/></td>
+        <td><input type = "button" class="btn" id="0 2" value=" "/></td>
+      </tr>
+      <tr>
+        <td><input type = "button" class="btn" id="1 0" value=" "/></td>
+        <td><input type = "button" class="btn" id="1 1" value=" "/></td>
+        <td><input type = "button" class="btn" id="1 2" value=" "/></td>
+      </tr>
+      <tr>
+        <td><input type = "button" class="btn" id="2 0" value=" "/></td>
+        <td><input type = "button" class="btn" id="2 1" value=" "/></td>
+        <td><input type = "button" class="btn" id="2 2" value=" "/></td>
+      </tr>
+    </table>
+  </form>
+    <p>How much fun is this</p>
+    <div id="results"></div>
   </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
- </body>
+
+  <script>
+   $(document).ready(function(){
+    $('.btn').click(function(event){
+        var form = $('form');
+        var x = this;
+        x.disabled = true;
+      $.ajax({
+          type: form.attr('method'),
+          url: form.attr('action'),
+          data: 'pos=' + this.id	
+          }).done(function(ret) 
+          {
+            if(ret === "X"){
+              $(x).val('X');
+            }
+            if(ret === "O"){
+              $(x).val('O');
+            }
+            if(ret === "XWINS"){
+            	$(x).val('X');
+            	if(confirm("X Wins!")){
+              		window.location.reload();
+              }
+            }
+            if(ret === "OWINS"){
+            	$(x).val('O');
+            	if(confirm("O Wins!")){
+              		window.location.reload();
+              }
+
+            }
+            if (ret === "Tie"){
+            	if(confirm("It's a tie!")){
+              		window.location.reload();
+              }
+            }
+
+          }).fail(function() {
+              alert("Error");
+          });
+          event.preventDefault();
+    });
+  });
+  </script>
+  </body>
 </html>
