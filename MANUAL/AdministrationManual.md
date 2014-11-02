@@ -1,6 +1,6 @@
 ###Stjórnunar leiðbeiningar (e.Administration Manual)
 
-Eftirfarandi þarf að hafa í huga 
+
 1. Ef notandi er ekki þegar búinn að setja upp git á skelinni, þá er nauðsynlegt að byrja á því.
 2. Því næst þarf að fara inná www.github.com, og leita að Sykurpudarnir.
 3. Því næst þarf að hafa samband við kerfisstjóra verkefnisins, Hörð, til þess að fá aðgang að sýndarvélinni. Netfangið hans er hordur12@ru.is
