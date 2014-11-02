@@ -17,4 +17,3 @@ addons:
     notification_email: hordur12@ru.is
     build_command_prepend: "./gradlew clean"
     build_command: "./gradlw build"
-    branch_pattern: coverity_scan
