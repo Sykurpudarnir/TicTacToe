@@ -4,8 +4,21 @@ import java.util.Scanner;
 public class TicTacToe{
 
 	public static int count = 1;
+/*	public static int moves = 1;
 
+	public static char getSymbol() {
+		if(moves % 2 == 0) {
+			return 'O';
+		} else {
+		return 'X';
+	}
 
+	public static void makeMove(char[][] board, row, column) {
+		char sym = getSymbol();
+		board[row][column] = sym;
+		moves++;
+	}
+*/
 	public static boolean checkIfWon(char[][] board){
         if(board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[1][1] != ' ')
         {
@@ -80,6 +93,7 @@ public class TicTacToe{
                 	row = user_input.nextInt();
         	} while(!(row >= 0) || !(row < 3));
 
+<<<<<<< HEAD
         	do{
           		System.out.println("Select which column from 0-2 you wish to place your symbol.");
                 	while(!user_input.hasNextInt()){
@@ -88,6 +102,19 @@ public class TicTacToe{
                 	}
                 	column = user_input.nextInt();
         	}while(!(column >= 0) || !(column < 3));
+=======
+		if(board[row][column] == ' '){
+			board[row][column]  = 'X';
+			count++;
+			Board.printBoard(board);
+			return true;
+		}
+		else{
+			System.out.println("Oh no!! that place is already occupied, choose another place for your symbol :)");
+		}
+		return result;
+	}
+>>>>>>> d7b3a429ea8d8134ede45c67458b558f31b1e7a8
 
         	if(board[row][column] == ' ')
 		{
@@ -110,42 +137,43 @@ public class TicTacToe{
 			for(int j = 0; j < 3; j++){
 				if(board[i][j] == ' '){
 					board[i][j] = 'O';
-			//		count++;
+					count++;
 					Board.printBoard(board);
 					break outerloop;
 				}
 			}
 		}
-		if(count % 2 != 0){
+		if(count % 2 == 0){
 			return true;
 		}
 		
 		return false;
 	}
 
+<<<<<<< HEAD
 	public static String playGame(char[][] board, int count){
 		while(!checkIfWon(board)){
+=======
+	public static String playGame(char[][] board, int row, int column){
+
+		while(!checkIfWon(Board.board)){
+
+>>>>>>> d7b3a429ea8d8134ede45c67458b558f31b1e7a8
 			if(count%2 != 0){
-				int row = 1;
-				int column = 1;
-				
-				TicTacToe.playersTurn(board, row, column);
-				
+				TicTacToe.playersTurn(Board.board, row, column);
 			}
+
 			else if(count % 2 == 0){
-				TicTacToe.computersTurn(board);
-				
+				TicTacToe.computersTurn(Board.board);
 
 			}
 			if(count == 10){
 				if(!checkIfWon(board))
 				{
 					System.out.println("Game has finished. It was a draw!");
-					return "Game has finished. It was a draw!";
+					break;
 				}
-			
 			}
-			count++;
 		}
 		return "Lets play again!";
 	}
@@ -154,7 +182,7 @@ public class TicTacToe{
 		//int row = 1;
 		//int column = 2;
 		Board.newBoard();
-		TicTacToe.playGame(Board.board,count);
+		TicTacToe.playGame(Board.board, row, column);
 		//Board.printBoard(Board.board); //This will not be used in the Web version.
 	}
 }
