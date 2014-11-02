@@ -98,19 +98,21 @@ public static boolean playersTurn(char[][] board, int row, int column){
 
 	public static boolean computersTurn(char[][] board){
 		System.out.println("computers turn");
-			for(int i = 0; i < 3; i++){
-				for(int j = 0; j < 3; j++){
-					if(Board.board[i][j] == ' '){
-						Board.board[i][j] = 'O';
-						count++;
-						Board.printBoard(Board.board);
-						break;
-					}
+		outerloop:
+		for(int i = 0; i < 3; i++){
+			for(int j = 0; j < 3; j++){
+				if(board[i][j] == ' '){
+					board[i][j] = 'O';
+					count++;
+					Board.printBoard(board);
+					break outerloop;
 				}
-				if(count % 2 != 0){
-					return true;
-				}
+			}
 		}
+		if(count % 2 == 0){
+			return true;
+		}
+		
 		return false;
 	}
 

@@ -1,11 +1,11 @@
-package is.ru.tictactoe;
+/*package is.ru.tictactoe;
 import java.util.Scanner;
 
 import static spark.Spark.*;
 import spark.*;
 
 
-public class TicTacToe{
+public class TicTacToeWeb{
 
 	public static void main(String[] args) {
 
@@ -65,4 +65,4 @@ public class TicTacToe{
 		});
 
 	}
-}
+}*/
