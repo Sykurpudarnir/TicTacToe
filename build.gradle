@@ -40,8 +40,8 @@ buildscript {
 
 jacocoTestReport {
     reports {
-        xml.enabled = true
-        html.enabled = false
+        xml.enabled = false
+        html.enabled = true
     }
 }
 
