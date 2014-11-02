@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.ru.tictactoe.TicTacToeTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2014-11-02T12:34:05" hostname="i-3a29db7a" time="0.041">
+<testsuite name="is.ru.tictactoe.TicTacToeTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2014-11-02T16:19:23" hostname="i-3a29db7a" time="0.048">
   <properties/>
-  <testcase name="testItsADraw" classname="is.ru.tictactoe.TicTacToeTest" time="0.029"/>
-  <testcase name="testComputersTurn" classname="is.ru.tictactoe.TicTacToeTest" time="0.002"/>
-  <testcase name="testWinnerCol" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
-  <testcase name="testWinnerRow" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
-  <testcase name="testWinnerDiag" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
-  <testcase name="testWinnerLost" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
-  <testcase name="testNewBoard" classname="is.ru.tictactoe.TicTacToeTest" time="0.002"/>
-  <system-out><![CDATA[10
-10 inni while
-10 inni computers
-computers turn
+  <testcase name="testItsADraw" classname="is.ru.tictactoe.TicTacToeTest" time="0.025"/>
+  <testcase name="testComputersTurn" classname="is.ru.tictactoe.TicTacToeTest" time="0.004"/>
+  <testcase name="testWinnerCol" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
+  <testcase name="testWinnerRow" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
+  <testcase name="testWinnerDiag" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
+  <testcase name="testWinnerLost" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
+  <testcase name="testNewBoard" classname="is.ru.tictactoe.TicTacToeTest" time="0.003"/>
+  <system-out><![CDATA[computers turn
 Game has finished. It was a draw!
 computers turn
 X | O |    
