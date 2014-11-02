@@ -6,18 +6,3 @@ jdk:
 
 after_success:
   - gradle jacocoTestReport coveralls
-
-env:
-  global:
-   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
-   #   via the "travis encrypt" command using the project repo's public key
-   - secure: "lSxNEUn3b+beHLyBz8eDXEJUPIDvvs7wsRd5kFT4L2n2R3Al9uc+b6hhWcQmWxk0l4z5XyL16ngjYDnjuW4QBYSSKYjWk28ZpI4d0ZITwdRvn7Nxal/U9i0WVMYTEg216igHqu+Aav/X97NYi+WhSYSlVTs1IryV0BGU3tWmyR0="
-
-addons:
-  coverity_scan:
-    project:
-      name: "Sykurpudarnir/TicTacToe"
-      description: "TicTacToe game for Hugbo"
-    notification_email: hordur12@ru.is
-    build_command_prepend: "./gradlew clean"
-    build_command: "./gradlw build"
