@@ -8,30 +8,28 @@ public class TicTacToe{
 	public static int count = 1;
 
 
-	public static String checkIfWon(char[][] board){
+	public static boolean checkIfWon(char[][] board){
         if(board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[1][1] != ' ')
         {
                 if(board[0][0] == 'X'){
                         System.out.println("Congratulation player1, you won!!!!");
-                        return "Congratulation player1, you won!!!!";
                 }
 
                 else{
                         System.out.println("YOU LOST!! The computer won!!");
-                        return "YOU LOST!! The computer won!!";
                 }
+		return true;
         }
         if(board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[2][0] != ' ')
         {
                 if(board[0][2] == 'X'){
                         System.out.println("Congratulation player1, you won!!!!");
-                        return "Congratulation player1, you won!!!!";
                 }
 
                 else{
                         System.out.println("YOU LOST!! The computer won!!");
-                        return "YOU LOST!! The computer won!!";
                 }
+		return true;
         }
         for(int i = 0; i < 3; i++)
         {
@@ -39,28 +37,26 @@ public class TicTacToe{
                 {
                         if(board[0][i] == 'X'){
                                 System.out.println("Congratulation player1, you won!!!!");
-                                return "Congratulation player1, you won!!!!";
                         }
 
                         else{
                                 System.out.println("YOU LOST!! The computer won!!");
-                                return "YOU LOST!! The computer won!!";
                         }
+			return true;
                 }
                 if(board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][2] != ' ')
                 {
                         if(board[i][0] == 'X'){
                                 System.out.println("Congratulation player1, you won!!!!");
-                                return "Congratulation player1, you won!!!!";
                         }
                         else{
                                 System.out.println("YOU LOST!! The computer won!!");
-                                return "YOU LOST!! The computer won!!";
                         }
+			return true;
                 }
         }
 
-        return "continue";
+        return false;
 }
 
 public static boolean playersTurn(char[][] board, int row, int column){
@@ -118,7 +114,7 @@ public static boolean playersTurn(char[][] board, int row, int column){
 
 	public static String playGame(char[][] board, int row, int column){
 
-		while(checkIfWon(Board.board) == "continue"){
+		while(!checkIfWon(Board.board)){
 
 			if(count%2 != 0){
 				TicTacToe.playersTurn(Board.board, row, column);
