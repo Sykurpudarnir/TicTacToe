@@ -1,8 +1,30 @@
 language: java
 
+env:
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "JMdudnH8zrDSPC/F+JWOFJ4YnVLomnxnTAt+EtbBiYJypBvxziuKomIJBopkrylrOTPFZ/4B3v/vYw2ymjuxLC1Ax5FeG2Sl3MpMGLa+3D0U6aMpW4e31UeB79BXEQkVCkp3wquSkcv/bAaDalB7U4OoPYgztxGTgdfS+hQ0x0E="
+
+addons:
+  coverity_scan:
+    project:
+      name: "Sykurpudarnir/TicTacToe"
+      description: "Build submitted via Travis CI"
+    notification_email: hordur12@ru.is
+    build_command_prepend: ./gradlew clean
+    build_command:   ./gradlew build
+    branch_pattern: coverity_scan
+
 jdk:
    - openjdk7
    - oraclejdk7
 
 after_success:
   - gradle jacocoTestReport coveralls
+  - scp build/libs/TicTacToe.jar hoddmachine@hordur.me:TheGame/
+  - scp build/reports/jacoco/test/html/index.html hoddmachine@hordur.me:sites/hordur.me/html/sykur/ 
+  - scp -r build/reports/jacoco/test/html/is.ru.tictactoe hoddmachine@hordur.me:sites/hordur.me/html/sykur/ 
+  - echo "------------------------------------------------------------------------" 
+  - echo "Mega build successfull, see www.hordur.me/sykur for CodeCoverage report." 
+  - echo "------------------------------------------------------------------------"
