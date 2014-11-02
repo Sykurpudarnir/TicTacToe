@@ -15,6 +15,6 @@ addons:
       name: "Sykurpudarnir/TicTacToe"
       description: "TicTacToe game for Hugbo"
     notification_email: hordur12@ru.is
-    build_command_prepend: ./gradlew
-    build_command: build
+    build_command_prepend: "./gradlew clean"
+    build_command: "./gradlw build"
     branch_pattern: coverity_scan
