@@ -5,72 +5,72 @@ import java.util.Scanner;
 
 <span class="fc" id="L6">	public static int count = 1;</span>
 
-
+	//checks if someone has won the game
 	public static boolean checkIfWon(char[][] board){
-<span class="pc bpc" id="L10" title="2 of 6 branches missed.">        if(board[0][0] == board[1][1] &amp;&amp; board[1][1] == board[2][2] &amp;&amp; board[1][1] != ' ')</span>
+	//checks the diagonal line for wins
+<span class="pc bpc" id="L11" title="2 of 6 branches missed.">        if(board[0][0] == board[1][1] &amp;&amp; board[1][1] == board[2][2] &amp;&amp; board[1][1] != ' ')</span>
         {
-<span class="pc bpc" id="L12" title="1 of 2 branches missed.">                if(board[0][0] == 'X'){</span>
-<span class="fc" id="L13">                        System.out.println(&quot;Congratulation player1, you won!!!!&quot;);</span>
+               //if the winning symbol is X then player1 won!
+<span class="pc bpc" id="L14" title="1 of 2 branches missed.">		 if(board[0][0] == 'X'){</span>
+<span class="fc" id="L15">                        System.out.println(&quot;Congratulation player1, you won!!!!&quot;);</span>
+                }
+		//else the computer won!
+                else{
+<span class="nc" id="L19">                        System.out.println(&quot;YOU LOST!! The computer won!!&quot;);</span>
+                }
+<span class="fc" id="L21">		return true;</span>
+        }
+	//checks the opposite diagonal line for wins
+<span class="pc bpc" id="L24" title="1 of 6 branches missed.">        if(board[0][2] == board[1][1] &amp;&amp; board[1][1] == board[2][0] &amp;&amp; board[2][0] != ' ')</span>
+        {
+<span class="pc bpc" id="L26" title="1 of 2 branches missed.">                if(board[0][2] == 'X'){</span>
+<span class="fc" id="L27">                        System.out.println(&quot;Congratulation player1, you won!!!!&quot;);</span>
                 }
 
                 else{
-<span class="nc" id="L17">                        System.out.println(&quot;YOU LOST!! The computer won!!&quot;);</span>
+<span class="nc" id="L31">                        System.out.println(&quot;YOU LOST!! The computer won!!&quot;);</span>
                 }
-<span class="fc" id="L19">		return true;</span>
+<span class="fc" id="L33">		return true;</span>
         }
-<span class="pc bpc" id="L21" title="1 of 6 branches missed.">        if(board[0][2] == board[1][1] &amp;&amp; board[1][1] == board[2][0] &amp;&amp; board[2][0] != ' ')</span>
-        {
-<span class="pc bpc" id="L23" title="1 of 2 branches missed.">                if(board[0][2] == 'X'){</span>
-<span class="fc" id="L24">                        System.out.println(&quot;Congratulation player1, you won!!!!&quot;);</span>
-                }
-
-                else{
-<span class="nc" id="L28">                        System.out.println(&quot;YOU LOST!! The computer won!!&quot;);</span>
-                }
-<span class="fc" id="L30">		return true;</span>
-        }
-<span class="fc bfc" id="L32" title="All 2 branches covered.">        for(int i = 0; i &lt; 3; i++)</span>
-        {
-<span class="pc bpc" id="L34" title="1 of 6 branches missed.">                if(board[0][i] == board[1][i] &amp;&amp; board[1][i] == board[2][i] &amp;&amp; board[1][i] != ' ')</span>
+<span class="fc bfc" id="L35" title="All 2 branches covered.">        for(int i = 0; i &lt; 3; i++)</span>
+        {	//checks every column for win
+<span class="pc bpc" id="L37" title="1 of 6 branches missed.">                if(board[0][i] == board[1][i] &amp;&amp; board[1][i] == board[2][i] &amp;&amp; board[1][i] != ' ')</span>
                 {
-<span class="pc bpc" id="L36" title="1 of 2 branches missed.">                        if(board[0][i] == 'X'){</span>
-<span class="nc" id="L37">                                System.out.println(&quot;Congratulation player1, you won!!!!&quot;);</span>
+<span class="pc bpc" id="L39" title="1 of 2 branches missed.">                        if(board[0][i] == 'X'){</span>
+<span class="nc" id="L40">                                System.out.println(&quot;Congratulation player1, you won!!!!&quot;);</span>
                         }
 
                         else{
-<span class="fc" id="L41">                                System.out.println(&quot;YOU LOST!! The computer won!!&quot;);</span>
+<span class="fc" id="L44">                                System.out.println(&quot;YOU LOST!! The computer won!!&quot;);</span>
                         }
-<span class="fc" id="L43">			return true;</span>
+<span class="fc" id="L46">			return true;</span>
                 }
-<span class="fc bfc" id="L45" title="All 6 branches covered.">                if(board[i][0] == board[i][1] &amp;&amp; board[i][1] == board[i][2] &amp;&amp; board[i][2] != ' ')</span>
+		//checks all rows for win
+<span class="fc bfc" id="L49" title="All 6 branches covered.">                if(board[i][0] == board[i][1] &amp;&amp; board[i][1] == board[i][2] &amp;&amp; board[i][2] != ' ')</span>
                 {
-<span class="pc bpc" id="L47" title="1 of 2 branches missed.">                        if(board[i][0] == 'X'){</span>
-<span class="fc" id="L48">                                System.out.println(&quot;Congratulation player1, you won!!!!&quot;);</span>
+<span class="pc bpc" id="L51" title="1 of 2 branches missed.">                        if(board[i][0] == 'X'){</span>
+<span class="fc" id="L52">                                System.out.println(&quot;Congratulation player1, you won!!!!&quot;);</span>
                         }
                         else{
-<span class="nc" id="L51">                                System.out.println(&quot;YOU LOST!! The computer won!!&quot;);</span>
+<span class="nc" id="L55">                                System.out.println(&quot;YOU LOST!! The computer won!!&quot;);</span>
                         }
-<span class="fc" id="L53">			return true;</span>
+<span class="fc" id="L57">			return true;</span>
                 }
         }
 
-<span class="fc" id="L57">        return false;</span>
+<span class="fc" id="L61">        return false;</span>
 }
 
 	
-
-	public static boolean playersTurn(char[][] board, int row, int column){
-<span class="nc" id="L63"> 		Scanner user_input = new Scanner(System.in);</span>
-<span class="nc" id="L64"> 		boolean result = false;</span>
- 	//	int row = 1;
- 	//	int column = 1;
- 	//	if(board[rows][col] == ' ')
- 	//	{
-        //		board[rows][col] = 'X';
-          //      	Board.printBoard(board);
-            //    	return true;
-       // 	}
-<span class="nc" id="L73">        	System.out.println(&quot;player 1's turn&quot;);</span>
+	//handles the move from the human player
+	public static void  playersTurn(char[][] board){
+ 	//	Board board = Board.newBoard;
+<span class="nc" id="L68">		int row = 1;</span>
+<span class="nc" id="L69">		int column = 1;</span>
+<span class="nc" id="L70">		Scanner user_input = new Scanner(System.in);</span>
+<span class="nc" id="L71"> 		boolean result = false;</span>
+<span class="nc" id="L72">        	System.out.println(&quot;player 1's turn&quot;);</span>
+		//a do while loop that first checks if the user input is a number, and asks user to enter a number
         	do{
 <span class="nc" id="L75">          		System.out.println(&quot;Select which row from 0-2 you wish to place your symbol&quot;);</span>
 <span class="nc bnc" id="L76" title="All 2 branches missed.">                	while(!user_input.hasNextInt()){</span>
@@ -78,44 +78,44 @@ import java.util.Scanner;
 <span class="nc" id="L78">                        	user_input.next();</span>
                 	}
 <span class="nc" id="L80">                	row = user_input.nextInt();</span>
-<span class="nc bnc" id="L81" title="All 4 branches missed.">        	} while(!(row &gt;= 0) || !(row &lt; 3));</span>
-
+<span class="nc bnc" id="L81" title="All 4 branches missed.">        	} while(!(row &gt;= 0) || !(row &lt; 3)); </span>
+		//we repeat this while the user input doesn't meet our conditions
+		//this do while loop does the same as the previous one except for the columns	
         	do{
-<span class="nc" id="L84">          		System.out.println(&quot;Select which column from 0-2 you wish to place your symbol.&quot;);</span>
-<span class="nc bnc" id="L85" title="All 2 branches missed.">                	while(!user_input.hasNextInt()){</span>
-<span class="nc" id="L86">                		System.out.println(&quot;That's not a number! Input the NUMBER of the column you wish to place your symbol! :)&quot;);</span>
-<span class="nc" id="L87">                        	user_input.next();</span>
+<span class="nc" id="L85">          		System.out.println(&quot;Select which column from 0-2 you wish to place your symbol.&quot;);</span>
+<span class="nc bnc" id="L86" title="All 2 branches missed.">                	while(!user_input.hasNextInt()){</span>
+<span class="nc" id="L87">                		System.out.println(&quot;That's not a number! Input the NUMBER of the column you wish to place your symbol! :)&quot;);</span>
+<span class="nc" id="L88">                        	user_input.next();</span>
                 	}
-<span class="nc" id="L89">                	column = user_input.nextInt();</span>
-<span class="nc bnc" id="L90" title="All 4 branches missed.">        	}while(!(column &gt;= 0) || !(column &lt; 3));</span>
-
-<span class="nc bnc" id="L92" title="All 2 branches missed.">        	if(board[row][column] == ' ')</span>
+<span class="nc" id="L90">                	column = user_input.nextInt();</span>
+<span class="nc bnc" id="L91" title="All 4 branches missed.">        	}while(!(column &gt;= 0) || !(column &lt; 3));</span>
+		//checks if the selected row and column are available
+<span class="nc bnc" id="L93" title="All 2 branches missed.">        	if(board[row][column] == ' ')</span>
 		{
-<span class="nc" id="L94">        		board[row][column]  = 'X';</span>
-                        //count++;
+<span class="nc" id="L95">        		board[row][column]  = 'X';</span>
 <span class="nc" id="L96">                	Board.printBoard(board);</span>
-<span class="nc" id="L97">                	return true;</span>
         	}
+		//if row and column are not available we give this error message and ask user to try another place for their symbol
         	else
 		{
 <span class="nc" id="L101">        		System.out.println(&quot;Oh no!! that place is already occupied, choose another place for your symbol :)&quot;);</span>
         	}
-<span class="nc" id="L103">        	return result;</span>
-        
-	}
+<span class="nc" id="L103">	}</span>
+	//this function executes the computers automatic move
 	public static boolean computersTurn(char[][] board){
-<span class="fc" id="L107">		System.out.println(&quot;computers turn&quot;);</span>
+<span class="fc" id="L106">		System.out.println(&quot;computers turn&quot;);</span>
 		outerloop:
+		//finds the next available space and places the computers symbol there
 <span class="fc bfc" id="L109" title="All 2 branches covered.">		for(int i = 0; i &lt; 3; i++){</span>
 <span class="fc bfc" id="L110" title="All 2 branches covered.">			for(int j = 0; j &lt; 3; j++){</span>
 <span class="fc bfc" id="L111" title="All 2 branches covered.">				if(board[i][j] == ' '){</span>
 <span class="fc" id="L112">					board[i][j] = 'O';</span>
-			//		count++;
-<span class="fc" id="L114">					Board.printBoard(board);</span>
-<span class="fc" id="L115">					break outerloop;</span>
+<span class="fc" id="L113">					Board.printBoard(board);</span>
+<span class="fc" id="L114">					break outerloop;</span>
 				}
 			}
 		}
+		//when the computer has made its move we break out of our for loops
 <span class="pc bpc" id="L119" title="1 of 2 branches missed.">		if(count % 2 != 0){</span>
 <span class="fc" id="L120">			return true;</span>
 		}
@@ -123,39 +123,39 @@ import java.util.Scanner;
 <span class="nc" id="L123">		return false;</span>
 	}
 
+	//calls the functions needed to play the game
 	public static String playGame(char[][] board, int count){
-<span class="pc bpc" id="L127" title="1 of 2 branches missed.">		while(!checkIfWon(board)){</span>
-<span class="pc bpc" id="L128" title="1 of 2 branches missed.">			if(count%2 != 0){</span>
-<span class="nc" id="L129">				int row = 1;</span>
-<span class="nc" id="L130">				int column = 1;</span>
+		//while no one has won the game, the players are asked to keep making their moves
+<span class="fc" id="L129">		System.out.println(&quot;Hey babycake, let's play&quot;);</span>
+<span class="pc bpc" id="L130" title="1 of 2 branches missed.">		while(!checkIfWon(board)){</span>
+<span class="pc bpc" id="L131" title="1 of 2 branches missed.">			if(count%2 != 0){</span>
+
+<span class="nc" id="L133">				TicTacToe.playersTurn(board);</span>
 				
-<span class="nc" id="L132">				TicTacToe.playersTurn(board, row, column);</span>
-				
-<span class="nc" id="L134">			}</span>
-<span class="pc bpc" id="L135" title="1 of 2 branches missed.">			else if(count % 2 == 0){</span>
-<span class="fc" id="L136">				TicTacToe.computersTurn(board);</span>
+			}
+<span class="pc bpc" id="L136" title="1 of 2 branches missed.">			else if(count % 2 == 0){</span>
+
+<span class="fc" id="L138">				TicTacToe.computersTurn(board);</span>
 				
 
 			}
-<span class="pc bpc" id="L140" title="1 of 2 branches missed.">			if(count == 10){</span>
-<span class="pc bpc" id="L141" title="1 of 2 branches missed.">				if(!checkIfWon(board))</span>
+			//if we have placed symbols in 9 places, there are no more left, we check if someone has won the game, if not we know it is a draw.
+<span class="pc bpc" id="L143" title="1 of 2 branches missed.">			if(count == 10){</span>
+<span class="pc bpc" id="L144" title="1 of 2 branches missed.">				if(!checkIfWon(board))</span>
 				{
-<span class="fc" id="L143">					System.out.println(&quot;Game has finished. It was a draw!&quot;);</span>
-<span class="fc" id="L144">					return &quot;Game has finished. It was a draw!&quot;;</span>
+<span class="fc" id="L146">					System.out.println(&quot;Game has finished. It was a draw!&quot;);</span>
+<span class="fc" id="L147">					return &quot;Game has finished. It was a draw!&quot;;</span>
 				}
 			
 			}
-<span class="nc" id="L148">			count++;</span>
+<span class="nc" id="L151">			count++;</span>
 		}
-<span class="nc" id="L150">		return &quot;Lets play again!&quot;;</span>
+<span class="nc" id="L153">		return &quot;Lets play again!&quot;;</span>
 	}
 
 	public static void main(String[] args) {
-		//int row = 1;
-		//int column = 2;
-<span class="nc" id="L156">		Board.newBoard();</span>
-<span class="nc" id="L157">		TicTacToe.playGame(Board.board,count);</span>
-		//Board.printBoard(Board.board); //This will not be used in the Web version.
+<span class="nc" id="L157">		Board.newBoard();</span>
+<span class="nc" id="L158">		TicTacToe.playGame(Board.board,count);</span>
 <span class="nc" id="L159">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.1.201405082137</span></div></body></html>
