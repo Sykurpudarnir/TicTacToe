@@ -126,6 +126,7 @@ public class TicTacToe{
 	//calls the functions needed to play the game
 	public static String playGame(char[][] board, int count){
 		//while no one has won the game, the players are asked to keep making their moves.
+		System.out.println("Hallo Hallo");
 		while(!checkIfWon(board)){
 			if(count%2 != 0){
 
